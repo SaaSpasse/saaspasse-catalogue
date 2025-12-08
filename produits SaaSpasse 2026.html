@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gamme SaaSpasse 2026 — Produits & Inclusions</title>
+  <style>
+    :root { --w: 1200px; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      color: #111;
+      background: #fafafa;
+    }
+    .wrap { max-width: var(--w); margin: 0 auto; }
+    h1, h2, h3 { margin: 0 0 12px; font-weight: 700; }
+    h1 { font-size: 1.75rem; margin-bottom: 8px; }
+    h2 { font-size: 1.25rem; margin-top: 20px; }
+    h3 { font-size: 1.1rem; color: #555; }
+    p { margin: 8px 0 14px; line-height: 1.5; }
+
+    .header {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .stat {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 12px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+    .stat b { display: block; font-size: 1.4rem; color: #333; }
+    .stat span { font-size: 0.9rem; color: #666; }
+
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
+    }
+    .tab {
+      border: 1px solid #ddd;
+      border-radius: 6px 6px 0 0;
+      padding: 8px 12px;
+      background: #f8f8f8;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .tab.active {
+      background: white;
+      border-bottom: 1px solid white;
+      margin-bottom: -1px;
+      font-weight: 600;
+    }
+    .tab:hover { background: #f0f0f0; }
+
+    .product-overview {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .product-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #222;
+    }
+    .product-revenue {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .product-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin: 12px 0;
+      padding: 12px;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+    .meta-item { font-size: 0.85rem; }
+    .meta-item b { display: block; font-size: 0.95rem; color: #333; }
+    .meta-item span { color: #666; }
+
+    .inclusions {
+      margin-top: 16px;
+    }
+    .inclusion-category {
+      margin-bottom: 16px;
+    }
+    .category-title {
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .inclusion-list {
+      display: grid;
+      gap: 6px;
+    }
+    .inclusion-item {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .inclusion-badge {
+      background: #28a745;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .inclusion-badge.promo {
+      background: #dc3545;
+    }
+
+    .hidden { display: none; }
+    .small { font-size: 0.85rem; color: #666; }
+    .muted { color: #888; }
+
+    @media (max-width: 768px) {
+      .product-header { flex-direction: column; }
+      .product-meta { grid-template-columns: 1fr; }
+      .nav-tabs { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="header">
+      <h1>Gamme SaaSpasse 2026</h1>
+      <p class="small muted">Produits, inclusions et bande passante promotionnelle</p>
+      <div class="stats">
+        <div class="stat">
+          <b>438K$</b>
+          <span>Revenus prévus</span>
+        </div>
+        <div class="stat">
+          <b>9</b>
+          <span>Produits</span>
+        </div>
+        <div class="stat">
+          <b>150+</b>
+          <span>Inclusions total</span>
+        </div>
+        <div class="stat">
+          <b>89.8%</b>
+          <span>Utilisation BP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-tabs">
+      <div class="tab active" onclick="showProduct('overview')">📊 Vue d'ensemble</div>
+      <div class="tab" onclick="showProduct('product-1')">🏆 Annuels Certifiés</div>
+      <div class="tab" onclick="showProduct('product-2')">🍽️ Conférence</div>
+      <div class="tab" onclick="showProduct('product-3')">👥 Communauté</div>
+      <div class="tab" onclick="showProduct('product-4')">🎯 Spotlight</div>
+      <div class="tab" onclick="showProduct('product-5')">💼 Employeur</div>
+      <div class="tab" onclick="showProduct('product-6')">🎪 Événements</div>
+      <div class="tab" onclick="showProduct('product-7')">💼 Job Board</div>
+      <div class="tab" onclick="showProduct('product-8')">🍽️ Dinners</div>
+      <div class="tab" onclick="showProduct('product-9')">📧 Infolettre</div>
+    </div>
+
+    <!-- Vue d'ensemble -->
+    <div id="overview" class="product-content">
+      <div class="product-overview">
+        <h2>Répartition par Revenus</h2>
+        <div style="display: grid; gap: 12px;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: #f0f0f0; border-radius: 4px;">
+            <span>Produit</span>
+            <span>Revenus</span>
+            <span>% Total</span>
+            <span>Inclusions</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>🏆 Partenaires Annuels Certifiés</span>
+            <span>160K$</span>
+            <span>36,5%</span>
+            <span>16</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>🍽️ Conférence Annuelle</span>
+            <span>120K$</span>
+            <span>27,4%</span>
+            <span>34</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>👥 Communauté Privée</span>
+            <span>70K$</span>
+            <span>16,0%</span>
+            <span>15</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>🎯 Partenaires Spotlight</span>
+            <span>30K$</span>
+            <span>6,8%</span>
+            <span>9</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>💼 Employeur Premium</span>
+            <span>20K$</span>
+            <span>4,6%</span>
+            <span>23</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>🎪 Événements Live</span>
+            <span>16K$</span>
+            <span>3,7%</span>
+            <span>20</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>💼 Job Board Premium</span>
+            <span>13,5K$</span>
+            <span>3,1%</span>
+            <span>22</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
+            <span>🍽️ Founder Dinners</span>
+            <span>6K$</span>
+            <span>1,4%</span>
+            <span>3</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; padding: 8px;">
+            <span>📧 Infolettre SaaSpal</span>
+            <span>2,5K$</span>
+            <span>0,6%</span>
+            <span>6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produit 1: Partenaires Annuels Certifiés -->
+    <div id="product-1" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">🏆 Partenaires Annuels Certifiés</div>
+          <div class="product-revenue">160 000 $ (36,5%)</div>
+        </div>
+        <div class="product-meta">
+          <div class="meta-item"><b>4</b><span>partenaires</span></div>
+          <div class="meta-item"><b>40 000 $</b><span>prix unitaire</span></div>
+          <div class="meta-item"><b>57 unités</b><span>bande passante</span></div>
+          <div class="meta-item"><b>5 max</b><span>plafond</span></div>
+        </div>
+        <div class="inclusions">
+          <div class="inclusion-category">
+            <div class="category-title">📻 Visibilité Podcast (2 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Ad reads mensuels sur le podcast (min. 1×/mois)
+                <span class="inclusion-badge promo">12 UP</span>
+              </div>
+              <div class="inclusion-item">
+                Épisode podcast dédié (compagnie/fondateurs)
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">📺 Contenu Vidéo Premium (4 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Entrevue vidéo professionnelle à vos bureaux OU entretien studio (1h)
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+              <div class="inclusion-item">
+                Capsules vidéo remote pour médias sociaux (3×/an)
+                <span class="inclusion-badge promo">3 UP</span>
+              </div>
+              <div class="inclusion-item">
+                YouTube Shorts dédiés (minimum 3×/an)
+                <span class="inclusion-badge promo">3 UP</span>
+              </div>
+              <div class="inclusion-item">
+                Instagram Reels (minimum 3×/an)
+                <span class="inclusion-badge promo">3 UP</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🌐 Présence Web Premium (2 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Pop-up sur le site (minimum 1 semaine/mois)
+                <span class="inclusion-badge promo">12 UP</span>
+              </div>
+              <div class="inclusion-item">
+                Profil à visibilité prioritaire dans le répertoire partenaires
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">📧 Visibilité Infolettre Premium (2 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Case study en profondeur sur infolettre (1×/an) + Featured Posts
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+              <div class="inclusion-item">
+                Promotions mensuelles dans l'infolettre (minimum 1×/mois)
+                <span class="inclusion-badge promo">12 UP</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">📱 Amplification Médias Sociaux (1 inclusion)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Promotions mensuelles sur LinkedIn (minimum 1×/mois)
+                <span class="inclusion-badge promo">12 UP</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🤝 Accès Exclusif & Networking (3 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Session live avec la communauté privée (1×/an)
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+              <div class="inclusion-item">
+                Accès privilégié à communauté en ligne privée fondateurs
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+              <div class="inclusion-item">
+                Invitations aux meetups privés avec fondateurs SaaSpasse
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🎪 Événements & Conférence (2 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">
+                Mentions + visibilité lors des événements IRL
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+              <div class="inclusion-item">
+                Intégration organique à la conférence annuelle
+                <span class="inclusion-badge">Gratuit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Les autres produits suivront le même pattern... -->
+    <!-- Pour la démo, je vais ajouter quelques autres produits clés -->
+
+    <!-- Produit 2: Conférence Annuelle -->
+    <div id="product-2" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">🍽️ Conférence Annuelle</div>
+          <div class="product-revenue">120 000 $ (27,4%)</div>
+        </div>
+        <div class="product-meta">
+          <div class="meta-item"><b>1</b><span>conférence</span></div>
+          <div class="meta-item"><b>4</b><span>forfaits</span></div>
+          <div class="meta-item"><b>34</b><span>inclusions</span></div>
+          <div class="meta-item"><b>Variable</b><span>prix</span></div>
+        </div>
+        <div class="inclusions">
+          <div class="inclusion-category">
+            <div class="category-title">🏆 Au fond Léon (14 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">Invitation à participer au podcast SaaSpasse '26</div>
+              <div class="inclusion-item">Vidéo de présentation personnalisée</div>
+              <div class="inclusion-item">Landing page personnalisée + code QR</div>
+              <div class="inclusion-item">Mini stand pour promouvoir services</div>
+              <div class="inclusion-item">Page personnalisée sur microsite conférence</div>
+              <div class="inclusion-item">Logo 5 mois sur communications</div>
+              <div class="inclusion-item">Remerciements officiels début/fin journées</div>
+              <div class="inclusion-item">3 billets gratuits pour équipe</div>
+              <div class="inclusion-item">Shoutout personnalisé aux membres</div>
+              <div class="inclusion-item">Section personnalisée infolettre récap</div>
+              <div class="inclusion-item">Publication LinkedIn individuelle</div>
+              <div class="inclusion-item">Logo sur carte postale entreprises</div>
+              <div class="inclusion-item">Avantages participants via infolettre</div>
+              <div class="inclusion-item">Session privée communauté fondateurs</div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🚂 P'tit train va loin (8 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">Page personnalisée microsite</div>
+              <div class="inclusion-item">Logo écrans entre présentations</div>
+              <div class="inclusion-item">Remerciements officiels</div>
+              <div class="inclusion-item">2 billets gratuits</div>
+              <div class="inclusion-item">Ad read podcast 1 mois</div>
+              <div class="inclusion-item">Publication LinkedIn partagée</div>
+              <div class="inclusion-item">Shoutout infolettre récap</div>
+              <div class="inclusion-item">Capsule vidéo spotlight 2026</div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🥞 Crêpes & Capital (5 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">Réseautage 20 fondateurs communauté</div>
+              <div class="inclusion-item">Vidéo diffusée Slack privé</div>
+              <div class="inclusion-item">Présentation courte brunch/souper</div>
+              <div class="inclusion-item">Cadeaux à chaque invité</div>
+              <div class="inclusion-item">2 billets gratuits</div>
+            </div>
+          </div>
+          <div class="inclusion-category">
+            <div class="category-title">🎉 Cette soirée-là (7 inclusions)</div>
+            <div class="inclusion-list">
+              <div class="inclusion-item">Logo écrans after-party</div>
+              <div class="inclusion-item">Vidéo alternée avec logo</div>
+              <div class="inclusion-item">2 billets gratuits</div>
+              <div class="inclusion-item">Remerciement micro + DJ</div>
+              <div class="inclusion-item">QR code landing stratégiques</div>
+              <div class="inclusion-item">Décoration aire commune</div>
+              <div class="inclusion-item">Concours/activation marque</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Placeholder pour les autres produits -->
+    <div id="product-3" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">👥 Communauté Privée</div>
+          <div class="product-revenue">70 000 $ (16,0%)</div>
+        </div>
+        <p class="small muted">Détails des 15 inclusions de la communauté privée...</p>
+      </div>
+    </div>
+
+    <div id="product-4" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">🎯 Partenaires Spotlight</div>
+          <div class="product-revenue">30 000 $ (6,8%)</div>
+        </div>
+        <p class="small muted">Détails des 9 inclusions du forfait mensuel...</p>
+      </div>
+    </div>
+
+    <div id="product-5" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">💼 Employeur Premium</div>
+          <div class="product-revenue">20 000 $ (4,6%)</div>
+        </div>
+        <p class="small muted">Détails des 23 inclusions sur 3 mois...</p>
+      </div>
+    </div>
+
+    <div id="product-6" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">🎪 Événements Live</div>
+          <div class="product-revenue">16 000 $ (3,7%)</div>
+        </div>
+        <p class="small muted">Détails des 20 inclusions du forfait Host...</p>
+      </div>
+    </div>
+
+    <div id="product-7" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">💼 Job Board Premium</div>
+          <div class="product-revenue">13 500 $ (3,1%)</div>
+        </div>
+        <p class="small muted">Détails des 22 inclusions premium...</p>
+      </div>
+    </div>
+
+    <div id="product-8" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">🍽️ Founder Dinners</div>
+          <div class="product-revenue">6 000 $ (1,4%)</div>
+        </div>
+        <p class="small muted">Détails des 3 inclusions exclusives...</p>
+      </div>
+    </div>
+
+    <div id="product-9" class="product-content hidden">
+      <div class="product-overview">
+        <div class="product-header">
+          <div class="product-title">📧 Infolettre SaaSpal</div>
+          <div class="product-revenue">2 500 $ (0,6%)</div>
+        </div>
+        <p class="small muted">Détails des 2 formules d'abonnement...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function showProduct(productId) {
+      // Cacher tous les contenus
+      document.querySelectorAll('.product-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Retirer la classe active de tous les onglets
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      // Afficher le contenu sélectionné
+      document.getElementById(productId).classList.remove('hidden');
+
+      // Activer l'onglet cliqué
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

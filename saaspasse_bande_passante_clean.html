@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SaaSpasse — bande passante 2026</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root { --w: 960px; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 24px; color: #111; }
+    .wrap { max-width: var(--w); margin: 0 auto; }
+    h1, h2, h3 { margin: 0 0 12px; font-weight: 700; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.25rem; margin-top: 28px; }
+    p { margin: 8px 0 14px; line-height: 1.5; }
+    .grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 16px; background: #fff; }
+    .meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+    .meta .kpi { border: 1px solid #eee; border-radius: 6px; padding: 10px; background: #fafafa; }
+    .kpi b { display: block; font-size: 1.1rem; }
+    ul { margin: 8px 0 14px 18px; }
+    code.block { display: block; white-space: pre-wrap; border: 1px solid #eee; background: #fafafa; padding: 12px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+    .small { font-size: 0.9rem; color: #555; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .pill { border: 1px solid #ddd; border-radius: 999px; padding: 6px 10px; background: #f8f8f8; }
+    .muted { color: #666; }
+    .legend { margin-top: 8px; }
+    .legend div { margin: 2px 0; }
+    .hr { height: 1px; background: #eee; margin: 18px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>bande passante 2026 — aperçu</h1>
+    <p class="small muted">les chiffres ci-dessous servent à présenter le forfait « partenaires annuels certifiés 2026 » dans le contexte global de la bande passante médiatique</p>
+
+    <!-- KPIs -->
+    <div class="meta">
+      <div class="kpi"><span>total global estimé</span><b>1 128</b><span class="small muted">unités/an</span></div>
+      <div class="kpi"><span>contenu organique</span><b>677</b><span class="small muted">60 % du global</span></div>
+      <div class="kpi"><span>bande passante promo</span><b>451</b><span class="small muted">40 % du global</span></div>
+      <div class="kpi"><span>part des annuels</span><b>~50 %</b><span class="small muted">de la promo (228 u.)</span></div>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid">
+      <div class="card">
+        <h2>bande passante totale (média)</h2>
+        <p class="small">répartition de tout le contenu public en ligne : organique vs promotionnel</p>
+        <canvas id="totalChart" aria-label="répartition globale organique vs promotionnel" role="img"></canvas>
+        <div class="legend small">
+          <div>organique : 677 unités (60,0 % du global)</div>
+          <div>promotionnel : 451 unités (40,0 % du global)</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>bande passante promotionnelle</h2>
+        <p class="small">répartition des 451 unités sponsorisées par catégorie de forfait</p>
+        <canvas id="promoChart" aria-label="répartition de la bande passante promotionnelle" role="img"></canvas>
+        <div class="legend small">
+          <div>partenaires annuels certifiés : 228 u. (~50,6 % de la promo)</div>
+          <div>spotlight : 126 u. (~27,9 %)</div>
+          <div>employeur premium : 52 u. (~11,5 %)</div>
+          <div>founder dinners : 3 u. (~0,7 %)</div>
+          <div>marge disponible : 42 u. (~9,3 %)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <!-- What units mean -->
+    <div class="card">
+      <h2>définition des unités promotionnelles</h2>
+      <p>une « unité » promotionnelle correspond à un passage sponsorisé dans l'un des canaux suivants :</p>
+      <ul>
+        <li>pop-up sur le site web</li>
+        <li>ad read dans le podcast</li>
+        <li>post sur les médias sociaux</li>
+        <li>section publicitaire dans l'infolettre</li>
+      </ul>
+      <p class="small muted">les partenaires annuels certifiés se voient attribuer <b>228 unités/an</b> au total (soit ~50 % de la bande passante promotionnelle)</p>
+    </div>
+
+    <!-- Justifications -->
+    <div class="card">
+      <h2>justifications</h2>
+      <ul>
+        <li>plafond : maximum 5 partenaires annuels certifiés</li>
+        <li>bande passante : les partenaires certifiés occupent 50 % de la bande passante promo, elle-même limitée à 40 % de la bande passante publique (60 % reste du contenu organique)</li>
+        <li>avantages exclusifs :
+          <ul>
+            <li>communauté value ++ : accès réservé à la communauté privée (Slack, meetups, sessions virtuelles)</li>
+            <li>conférence value ++ : intégration organique dans la programmation et le contenu de la conférence annuelle</li>
+            <li>audience en croissance : graphique à insérer au besoin</li>
+            <li>recentrage : retrait des 3 partenaires affiliés pour concentrer la promo sur les certifiés</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Optional: data for reuse -->
+    <div class="card">
+      <h2>données (json)</h2>
+      <code class="block" id="jsonBlock">{
+  "saaspasse_bande_passante_2026": {
+    "total_unite_global": 1128,
+    "total_unite_promo": 451,
+    "repartition_globale": {
+      "contenu_organique": { "unites": 677, "pourcentage": 60 },
+      "contenu_promotionnel": { "unites": 451, "pourcentage": 40 }
+    },
+    "repartition_promotionnelle": {
+      "partenaires_annuels_certifies": { "unites": 228, "pourcentage_promo": 50.6, "pourcentage_total": 20.2, "revenus": 160000 },
+      "partenaires_spotlight": { "unites": 126, "pourcentage_promo": 27.9, "pourcentage_total": 11.2, "revenus": 30000 },
+      "employeur_premium": { "unites": 52, "pourcentage_promo": 11.5, "pourcentage_total": 4.6, "revenus": 20000 },
+      "founder_dinners": { "unites": 3, "pourcentage_promo": 0.7, "pourcentage_total": 0.3, "revenus": 6000 },
+      "marge_disponible": { "unites": 42, "pourcentage_promo": 9.3, "pourcentage_total": 3.7, "revenus": 0 }
+    },
+    "revenus_total_bp": 216000,
+    "revenus_total_prevu": 438000
+  }
+}</code>
+      <div class="row">
+        <button class="pill" onclick="copyJSON()">copier le json</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---- data (single source of truth) ----
+    const GLOBAL_TOTAL = 1128;
+    const ORGANIQUE = 677;
+    const PROMO = 451;
+
+    const promoBreakdown = [
+      { label: "partenaires annuels certifiés", units: 228 },
+      { label: "spotlight", units: 126 },
+      { label: "employeur premium", units: 52 },
+      { label: "founder dinners", units: 3 },
+      { label: "marge disponible", units: 42 },
+    ];
+
+    // ---- charts ----
+    const fmtPct = (num) => (Math.round(num * 10) / 10).toLocaleString("fr-CA") + " %";
+    const ctxTotal = document.getElementById("totalChart");
+
+    new Chart(ctxTotal, {
+      type: "doughnut",
+      data: {
+        labels: [`contenu organique (${ORGANIQUE})`, `contenu promotionnel (${PROMO})`],
+        datasets: [{
+          data: [ORGANIQUE, PROMO],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "bottom" },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const v = ctx.parsed;
+                const pct = (v / GLOBAL_TOTAL) * 100;
+                return `${ctx.label} — ${fmtPct(pct)} du global`;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctxPromo = document.getElementById("promoChart");
+    new Chart(ctxPromo, {
+      type: "doughnut",
+      data: {
+        labels: promoBreakdown.map(d => `${d.label} (${d.units})`),
+        datasets: [{
+          data: promoBreakdown.map(d => d.units),
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: "bottom" },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const v = ctx.parsed;
+                const pctPromo = (v / PROMO) * 100;
+                const pctTotal = (v / GLOBAL_TOTAL) * 100;
+                return `${ctx.label} — ${fmtPct(pctPromo)} de la promo / ${fmtPct(pctTotal)} du global`;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // ---- helpers ----
+    function copyJSON() {
+      const text = document.getElementById("jsonBlock").innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("JSON copié dans le presse-papiers");
+      });
+    }
+  </script>
+</body>
+</html>

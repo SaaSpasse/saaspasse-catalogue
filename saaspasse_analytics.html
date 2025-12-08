@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaSpasse - Analyse Bande Passante Promotionnelle</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .chart-wrapper {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .summary {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        .summary h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .channels-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .channels-table th, .channels-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .channels-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .channels-table tr:hover {
+            background: #f8f9fa;
+        }
+        .status-ok {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .status-warning {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        .status-error {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 SaaSpasse Analytics</h1>
+        <p class="subtitle">Analyse de la bande passante promotionnelle - 2026</p>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Unités Disponibles</h3>
+                <div class="number">451</div>
+                <p>Unités promotionnelles/an</p>
+            </div>
+            <div class="stat-card">
+                <h3>Unités Consommées</h3>
+                <div class="number">439</div>
+                <p>Avec tous les forfaits</p>
+            </div>
+            <div class="stat-card">
+                <h3>Surplus</h3>
+                <div class="number">12</div>
+                <p>Unités disponibles</p>
+            </div>
+            <div class="stat-card">
+                <h3>Taux d'Utilisation</h3>
+                <div class="number">97%</div>
+                <p>Capacité utilisée</p>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <div class="chart-title">📱 LinkedIn - Ratio de Contenu</div>
+                <canvas id="linkedinChart" width="400" height="300"></canvas>
+                <div style="text-align: center; margin-top: 15px;">
+                    <strong>84 posts sponsorisés / 166 posts organiques</strong><br>
+                    <span style="color: #7f8c8d;">250 posts total par an (5/semaine × 50 semaines)</span>
+                </div>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-title">📸 Instagram - Ratio de Contenu</div>
+                <canvas id="instagramChart" width="400" height="300"></canvas>
+                <div style="text-align: center; margin-top: 15px;">
+                    <strong>35 posts sponsorisés / 50 posts organiques</strong><br>
+                    <span style="color: #7f8c8d;">85 posts total par an (1 organique/semaine + sponsorisés)</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">📋 Bande Passante par Canal</h3>
+        <table class="channels-table">
+            <thead>
+                <tr>
+                    <th>Canal</th>
+                    <th>Disponible</th>
+                    <th>Consommé</th>
+                    <th>Restant</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🎙️ Podcast</td>
+                    <td>100</td>
+                    <td>90</td>
+                    <td>+10</td>
+                    <td class="status-ok">✅ OK</td>
+                </tr>
+                <tr>
+                    <td>📧 Infolettre</td>
+                    <td>100</td>
+                    <td>100</td>
+                    <td>0</td>
+                    <td class="status-ok">✅ Parfait</td>
+                </tr>
+                <tr>
+                    <td>🔗 LinkedIn</td>
+                    <td>100</td>
+                    <td>84</td>
+                    <td>+16</td>
+                    <td class="status-ok">✅ OK</td>
+                </tr>
+                <tr>
+                    <td>🌐 Pop-ups Site</td>
+                    <td>48</td>
+                    <td>49</td>
+                    <td>-1</td>
+                    <td class="status-warning">⚠️ Léger dépassement</td>
+                </tr>
+                <tr>
+                    <td>📺 YouTube</td>
+                    <td>50</td>
+                    <td>44</td>
+                    <td>+6</td>
+                    <td class="status-ok">✅ OK</td>
+                </tr>
+                <tr>
+                    <td>📸 Instagram</td>
+                    <td>50</td>
+                    <td>35</td>
+                    <td>+15</td>
+                    <td class="status-ok">✅ OK</td>
+                </tr>
+                <tr>
+                    <td>🍽️ Founder Dinners</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td class="status-ok">✅ Parfait</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <h3>📈 Résumé Exécutif</h3>
+            <p><strong>Situation générale :</strong> Excellente calibration avec 97% d'utilisation de la bande passante.</p>
+            <p><strong>Forfaits planifiés :</strong> 4 Annuels Certifiés + 9 Spotlight + 2 Employeurs Premium</p>
+            <p><strong>Points d'attention :</strong></p>
+            <ul>
+                <li>Pop-ups site web : Dépassement minimal de 1 unité (facilement gérable)</li>
+                <li>LinkedIn : Ratio sain de 33,6% de contenu sponsorisé</li>
+                <li>Instagram : Ratio plus élevé de 41,2% de contenu sponsorisé</li>
+                <li>Infolettre : Parfaitement équilibrée à 100/100</li>
+            </ul>
+            <p><strong>Recommandation :</strong> La stratégie actuelle est viable et bien équilibrée. Considérer une légère augmentation de contenu organique sur Instagram si nécessaire.</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuration LinkedIn Chart
+        const linkedinCtx = document.getElementById('linkedinChart').getContext('2d');
+        new Chart(linkedinCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Posts Sponsorisés', 'Posts Organiques'],
+                datasets: [{
+                    data: [84, 166],
+                    backgroundColor: ['#e74c3c', '#27ae60'],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const percentage = ((context.parsed / 250) * 100).toFixed(1);
+                                return context.label + ': ' + context.parsed + ' (' + percentage + '%)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Configuration Instagram Chart
+        const instagramCtx = document.getElementById('instagramChart').getContext('2d');
+        new Chart(instagramCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Posts Sponsorisés', 'Posts Organiques'],
+                datasets: [{
+                    data: [35, 50],
+                    backgroundColor: ['#e74c3c', '#27ae60'],
+                    borderWidth: 3,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const percentage = ((context.parsed / 85) * 100).toFixed(1);
+                                return context.label + ': ' + context.parsed + ' (' + percentage + '%)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

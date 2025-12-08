@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaSpasse - Répartition Bande Passante par Forfait</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            height: 500px;
+        }
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stats-table th, .stats-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .stats-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .stats-table tr:hover {
+            background: #f8f9fa;
+        }
+        .color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 3px;
+            vertical-align: middle;
+        }
+        .summary {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .summary h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .metric {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Répartition Bande Passante</h1>
+        <p class="subtitle">Distribution des unités promotionnelles par forfait - 2026</p>
+
+        <div class="chart-container">
+            <canvas id="repartitionChart" width="400" height="400"></canvas>
+        </div>
+
+        <h3 style="color: #2c3e50; text-align: center; margin-bottom: 20px;">📋 Détail par Forfait</h3>
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>Forfait</th>
+                    <th>Quantité</th>
+                    <th>Unités/Forfait</th>
+                    <th>Total Unités</th>
+                    <th>% de la Bande Passante</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="color-box" style="background-color: #e74c3c;"></span>🏆 Partenaires Annuels Certifiés</td>
+                    <td>4</td>
+                    <td>56</td>
+                    <td><strong>224</strong></td>
+                    <td><strong>49.7%</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="color-box" style="background-color: #3498db;"></span>🎯 Partenaires Spotlight</td>
+                    <td>9</td>
+                    <td>14</td>
+                    <td><strong>126</strong></td>
+                    <td><strong>27.9%</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="color-box" style="background-color: #f39c12;"></span>💼 Employeur Premium</td>
+                    <td>2</td>
+                    <td>26</td>
+                    <td><strong>52</strong></td>
+                    <td><strong>11.5%</strong></td>
+                </tr>
+                <tr>
+                    <td><span class="color-box" style="background-color: #9b59b6;"></span>🍽️ Founder Dinners</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td><strong>3</strong></td>
+                    <td><strong>0.7%</strong></td>
+                </tr>
+                <tr style="background: #f8f9fa; font-weight: bold;">
+                    <td><span class="color-box" style="background-color: #27ae60;"></span>🟢 Disponible</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><strong>46</strong></td>
+                    <td><strong>10.2%</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <h3>📈 Analyse de Répartition</h3>
+            <div class="metric">405 unités utilisées / 451 total</div>
+            <p><strong>Taux d'utilisation :</strong> 89.8% de la bande passante</p>
+            <p><strong>Répartition principale :</strong></p>
+            <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                <li><strong>Partenaires Annuels (49.7%)</strong> - Engagement long terme, fondation stable</li>
+                <li><strong>Partenaires Spotlight (27.9%)</strong> - Flexibilité mensuelle, revenus récurrents</li>
+                <li><strong>Employeurs Premium (11.5%)</strong> - Niche spécialisée, tarif premium</li>
+                <li><strong>Marge disponible (10.2%)</strong> - Opportunités ponctuelles et croissance</li>
+            </ul>
+            <p style="margin-top: 20px;"><strong>Recommandation :</strong> Répartition équilibrée avec une base solide d'annuels et une flexibilité mensuelle attractive.</p>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('repartitionChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Partenaires Annuels Certifiés (224)',
+                    'Partenaires Spotlight (126)',
+                    'Employeur Premium (52)',
+                    'Founder Dinners (3)',
+                    'Disponible (46)'
+                ],
+                datasets: [{
+                    data: [224, 126, 52, 3, 46],
+                    backgroundColor: [
+                        '#e74c3c',  // Rouge pour Annuels
+                        '#3498db',  // Bleu pour Spotlight
+                        '#f39c12',  // Orange pour Employeur
+                        '#9b59b6',  // Violet pour Founder Dinners
+                        '#27ae60'   // Vert pour Disponible
+                    ],
+                    borderWidth: 3,
+                    borderColor: '#fff',
+                    hoverBorderWidth: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: {
+                                size: 14
+                            },
+                            generateLabels: function(chart) {
+                                const data = chart.data;
+                                return data.labels.map((label, index) => {
+                                    const value = data.datasets[0].data[index];
+                                    const percentage = ((value / 451) * 100).toFixed(1);
+                                    return {
+                                        text: `${label} - ${percentage}%`,
+                                        fillStyle: data.datasets[0].backgroundColor[index],
+                                        strokeStyle: data.datasets[0].backgroundColor[index],
+                                        lineWidth: 2,
+                                        hidden: false,
+                                        index: index
+                                    };
+                                });
+                            }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        titleColor: 'white',
+                        bodyColor: 'white',
+                        borderColor: 'white',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed;
+                                const percentage = ((value / 451) * 100).toFixed(1);
+                                return `${context.label}: ${value} unités (${percentage}%)`;
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    animateRotate: true,
+                    duration: 2000
+                }
+            }
+        });
+    </script>
+</body>
+</html>
