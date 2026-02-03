@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Catalogue SaaSpasse 2026 — Opportunités de Partenariat</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23853DFF%22 stroke-width=%222%22><rect x=%222%22 y=%227%22 width=%2220%22 height=%2214%22 rx=%222%22/><path d=%22M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16%22/></svg>">
   <style>
     :root {
       --w: 1200px;
@@ -77,6 +77,21 @@
       color: var(--purple);
     }
     .tab:hover { color: var(--purple); }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: -2px;
+      margin-right: 6px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .tab .icon { opacity: 0.7; }
+    .tab.active .icon { opacity: 1; }
 
     .availability-indicator {
       display: inline-block;
@@ -342,16 +357,16 @@
     </div>
 
     <div class="nav-tabs">
-      <div class="tab active" onclick="showProduct('overview')">📊 Vue d'ensemble</div>
-      <div class="tab" onclick="showProduct('product-1')">🏆 Annuels certifiés</div>
-      <div class="tab" onclick="showProduct('product-2')">🎯 Conférence</div>
-      <div class="tab" onclick="showProduct('product-5')">💼 Employeur</div>
-      <div class="tab" onclick="showProduct('product-4')">🎯 Spotlight</div>
-      <div class="tab" onclick="showProduct('product-3')">👥 Communauté</div>
-      <div class="tab" onclick="showProduct('product-6')">🎙️ Forfait host</div>
-      <div class="tab" onclick="showProduct('product-8')">🍽️ Dinners</div>
-      <div class="tab" onclick="showProduct('product-7')">💼 Job board</div>
-      <div class="tab" onclick="showProduct('product-9')">📧 Infolettre</div>
+      <div class="tab active" onclick="showProduct('overview')"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Vue d'ensemble</div>
+      <div class="tab" onclick="showProduct('product-1')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Annuels certifiés</div>
+      <div class="tab" onclick="showProduct('product-2')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Conférence</div>
+      <div class="tab" onclick="showProduct('product-5')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Employeur</div>
+      <div class="tab" onclick="showProduct('product-4')"><svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Spotlight</div>
+      <div class="tab" onclick="showProduct('product-3')"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Communauté</div>
+      <div class="tab" onclick="showProduct('product-6')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Forfait host</div>
+      <div class="tab" onclick="showProduct('product-8')"><svg class="icon" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Dinners</div>
+      <div class="tab" onclick="showProduct('product-7')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job board</div>
+      <div class="tab" onclick="showProduct('product-9')"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Infolettre</div>
     </div>
 
     <!-- Vue d'ensemble -->
@@ -369,63 +384,63 @@
             <span>Disponibilité</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>🏆 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-1')">Partenaires annuels certifiés</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-1')">Partenaires annuels certifiés</span></span>
             <span>Contactez-nous</span>
             <span>12 mois</span>
             <span>5</span>
             <span class="availability-text-full">0</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>🎯 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-2')">Commandites conférence annuelle</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-2')">Commandites conférence annuelle</span></span>
             <span>3 500-16 000 $</span>
             <span>3 mois</span>
             <span>8</span>
             <span class="availability-text-low">2</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>💼 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-5')">Employeur premium</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-5')">Employeur premium</span></span>
             <span>Contactez-nous</span>
             <span>3 mois</span>
             <span>4</span>
             <span class="availability-text-high">4</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>🎯 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-4')">Partenaires spotlight</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-4')">Partenaires spotlight</span></span>
             <span>3 500 $</span>
             <span>1 mois</span>
             <span>11</span>
             <span class="availability-text-medium">5</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>👥 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-3')">Communauté privée</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-3')">Communauté privée</span></span>
             <span>Contactez-nous</span>
             <span>12 mois</span>
             <span>Sur invitation</span>
             <span class="availability-text-full">Capacité atteinte</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>🎙️ <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-6')">Forfait host</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-6')">Forfait host</span></span>
             <span>2 000 $</span>
             <span>1 soirée</span>
             <span>4</span>
             <span class="availability-text-medium">3</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>🍽️ <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-8')">Founder dinners</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-8')">Founder dinners</span></span>
             <span>2 000 $</span>
             <span>1 soirée</span>
             <span>3</span>
             <span class="availability-text-medium">2</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span>💼 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-7')">Job board premium</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-7')">Job board premium</span></span>
             <span>400 $</span>
             <span>1 mois</span>
             <span>Illimité</span>
             <span class="availability-text-high">N/A</span>
           </div>
           <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px;">
-            <span>📧 <span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-9')">Infolettre SaaSpal</span></span>
+            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-9')">Infolettre SaaSpal</span></span>
             <span>65 $</span>
             <span>12 mois</span>
             <span>Illimité</span>
@@ -446,7 +461,7 @@
     <div id="product-1" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">🏆 Partenaires annuels certifiés</div>
+          <div class="product-title">Partenaires annuels certifiés</div>
           <div class="product-price">Contactez-nous</div>
         </div>
         <p>Le forfait premium de partenariat annuel offrant une visibilité maximale et des avantages exclusifs sur tous les canaux SaaSpasse pendant une année complète.</p>
@@ -459,7 +474,7 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">✅ Partenaires confirmés</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
               <a href="https://www.lechiffre.ca/fr/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Le Chiffre</a>
@@ -481,14 +496,14 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">📻 Visibilité podcast</div>
+            <div class="category-title">Visibilité podcast</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Ad reads mensuels sur le podcast (minimum 1×/mois)</div>
               <div class="inclusion-item">Épisode podcast dédié à votre entreprise/histoire des fondateurs</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📺 Contenu vidéo premium</div>
+            <div class="category-title">Contenu vidéo premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Entrevue vidéo professionnelle à vos bureaux OU entretien studio (1h)</div>
               <div class="inclusion-item">Capsules vidéo remote pour médias sociaux (3×/an)</div>
@@ -497,27 +512,27 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🌐 Présence web premium</div>
+            <div class="category-title">Présence web premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Pop-up sur le site (minimum 1 semaine/mois)</div>
               <div class="inclusion-item">Profil à visibilité prioritaire dans le répertoire partenaires</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📧 Visibilité infolettre premium</div>
+            <div class="category-title">Visibilité infolettre premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Case study en profondeur sur infolettre (1×/an) + Featured Posts</div>
               <div class="inclusion-item">Promotions mensuelles dans l'infolettre (minimum 1×/mois)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📱 Amplification médias sociaux</div>
+            <div class="category-title">Amplification médias sociaux</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Promotions mensuelles sur LinkedIn (minimum 1×/mois)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🤝 Accès exclusif & networking</div>
+            <div class="category-title">Accès exclusif & networking</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Session live avec la communauté privée (1×/an)</div>
               <div class="inclusion-item">Accès privilégié à communauté en ligne privée fondateurs</div>
@@ -540,7 +555,7 @@
     <div id="product-2" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">🎯 Commandites conférence annuelle</div>
+          <div class="product-title">Commandites conférence annuelle</div>
           <div class="product-price">Prix variables</div>
         </div>
         <p>Forfaits de commandite pour la conférence annuelle SaaSpasse, offrant différents niveaux de visibilité et d'engagement avec la communauté tech québécoise.</p>
@@ -553,10 +568,10 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
-          <h3 style="margin: 0 0 12px 0; font-size: 1rem; color: #333;">✅ Partenaires confirmés par forfait</h3>
+          <h3 style="margin: 0 0 12px 0; font-size: 1rem; color: #333;">• Partenaires confirmés par forfait</h3>
           <div style="display: grid; gap: 12px; font-size: 0.9rem;">
             <div>
-              <div style="font-weight: 600; margin-bottom: 6px;">🏆 Au fond Léon (3/3 - complet)</div>
+              <div style="font-weight: 600; margin-bottom: 6px;">Au fond Léon (3/3 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <a href="https://workleap.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Workleap</a>
                 <a href="https://capitalenumerique.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Capitale numérique</a>
@@ -564,19 +579,19 @@
               </div>
             </div>
             <div>
-              <div style="font-weight: 600; margin-bottom: 6px;">🚂 P'tit train va loin (1/3 - 2 dispo)</div>
+              <div style="font-weight: 600; margin-bottom: 6px;">P'tit train va loin (1/3 - 2 dispo)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <a href="https://missiveapp.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Missive</a>
               </div>
             </div>
             <div>
-              <div style="font-weight: 600; margin-bottom: 6px;">🍽️ Pré-Conf Founder Dinner (1/1 - complet)</div>
+              <div style="font-weight: 600; margin-bottom: 6px;">Pré-Conf Founder Dinner (1/1 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <a href="https://finaltacapital.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Finalta</a>
               </div>
             </div>
             <div>
-              <div style="font-weight: 600; margin-bottom: 6px;">🎉 Cette soirée-là (1/1 - complet)</div>
+              <div style="font-weight: 600; margin-bottom: 6px;">Cette soirée-là (1/1 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <a href="https://yack.one/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Yack</a>
               </div>
@@ -586,7 +601,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🏆 Au fond Léon - Forfait premium</div>
+            <div class="category-title">Au fond Léon - Forfait premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Invitation à participer au podcast SaaSpasse '26</div>
               <div class="inclusion-item">Vidéo de présentation personnalisée sur écrans + YouTube</div>
@@ -604,7 +619,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🚂 P'tit train va loin - Forfait intermédiaire</div>
+            <div class="category-title">P'tit train va loin - Forfait intermédiaire</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Page personnalisée sur microsite conférence</div>
               <div class="inclusion-item">Logo écrans entre présentations</div>
@@ -617,7 +632,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🍽️ Pré-Conf Founder Dinner</div>
+            <div class="category-title">Pré-Conf Founder Dinner</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Réseautage 20 fondateurs communauté</div>
               <div class="inclusion-item">Vidéo diffusée Slack privé</div>
@@ -627,7 +642,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎉 Cette soirée-là - After-party</div>
+            <div class="category-title">Cette soirée-là - After-party</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Logo en gros sur écrans after-party</div>
               <div class="inclusion-item">Vidéo de présentation en alternance avec logo</div>
@@ -654,7 +669,7 @@
     <div id="product-3" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">👥 Communauté privée</div>
+          <div class="product-title">Communauté privée</div>
           <div class="product-price">Contactez-nous</div>
         </div>
         <p>Communauté exclusive de fondateurs et joueurs clés SaaS offrant networking, formation et avantages exclusifs pour accélérer la croissance des entreprises technologiques. Accès sur invitation seulement.</p>
@@ -667,14 +682,14 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 4px solid #ffc107;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">📋 Liste d'attente</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">• Liste d'attente</h3>
           <p style="margin: 0; font-size: 0.9rem; color: #856404;">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
         </div>
 
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🤝 Communauté & networking</div>
+            <div class="category-title">Communauté & networking</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Accès aux canaux Slack de discussion thématiques</div>
               <div class="inclusion-item">Messagerie directe illimitée avec tous les membres</div>
@@ -683,7 +698,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📅 Événements & formation</div>
+            <div class="category-title">Événements & formation</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Invitations aux founders meetups privés en personne (4 en '25)</div>
               <div class="inclusion-item">Sessions hebdomadaires de office hours avec la communauté</div>
@@ -693,7 +708,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎁 Avantages exclusifs</div>
+            <div class="category-title">Avantages exclusifs</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Rabais sur tous les forfaits SaaSpasse (spotlight, RH, commandites, etc.)</div>
               <div class="inclusion-item">Rabais sur tous les événements SaaSpasse</div>
@@ -715,7 +730,7 @@
     <div id="product-4" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">🎯 Partenaires spotlight</div>
+          <div class="product-title">Partenaires spotlight</div>
           <div class="product-price">3 500 $ / mois</div>
         </div>
         <p>Forfait mensuel de commandite permettant d'annoncer un produit ou service utile pour les SaaS. Opportunité de devenir l'un des premiers annonceurs à un tarif préférentiel.</p>
@@ -738,7 +753,7 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">✅ Partenaires confirmés</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
               <a href="https://www.fairpointinc.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Fairpoint Assurance</a>
@@ -769,40 +784,40 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🌐 Présence web dédiée</div>
+            <div class="category-title">Présence web dédiée</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Page sur mesure sur notre site web</div>
               <div class="inclusion-item">Pop-up exclusif sur site web (1 semaine dans le mois)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📺 Contenu vidéo premium</div>
+            <div class="category-title">Contenu vidéo premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Mini-podcast : entrevue ou démo produit custom sur YouTube (reste en ligne pour toujours)</div>
               <div class="inclusion-item">YouTube Short dédié dans le mois</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📱 Amplification médias sociaux intensive</div>
+            <div class="category-title">Amplification médias sociaux intensive</div>
             <div class="inclusion-list">
               <div class="inclusion-item">2x posts dédiés sur LinkedIn dans le mois</div>
               <div class="inclusion-item">1x Reel personnalisé sur Instagram dans le mois</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📻 Domination podcast</div>
+            <div class="category-title">Domination podcast</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Ad read dans chaque podcast du mois (version vidéo sur YouTube, version audio sur autres plateformes)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📧 Visibilité newsletter maximale</div>
+            <div class="category-title">Visibilité newsletter maximale</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Section dédiée dans chaque infolettre du mois</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎪 Présence événementielle</div>
+            <div class="category-title">Présence événementielle</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Mention lors de l'événement du mois (lorsque applicable)</div>
             </div>
@@ -821,7 +836,7 @@
     <div id="product-5" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">💼 Employeur premium</div>
+          <div class="product-title">Employeur premium</div>
           <div class="product-price">Contactez-nous</div>
         </div>
         <p>Forfait premium de 3 mois pour employeurs cherchant à maximiser leur visibilité de recrutement et leur marque employeur auprès de la communauté tech SaaSpasse.</p>
@@ -845,7 +860,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🎬 Production média complète</div>
+            <div class="category-title">Production média complète</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Déplacement de l'équipe SaaSpasse (3-4h sur site)</div>
               <div class="inclusion-item">Mini-podcast professionnel (15-20 min avec fondateurs) diffusé en permanence sur YouTube</div>
@@ -856,7 +871,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🏢 Profil employeur premium</div>
+            <div class="category-title">Profil employeur premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Page vitrine incluant hero vidéo</div>
               <div class="inclusion-item">Sections complètes : à propos / profils recherchés / bon à savoir / chiffres clés / galerie médias / offres d'emploi / tech stack</div>
@@ -864,7 +879,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎯 Visibilité prioritaire job board</div>
+            <div class="category-title">Visibilité prioritaire job board</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Visibilité prioritaire sur job board</div>
               <div class="inclusion-item">3 offres d'emploi premium actives incluses en continu</div>
@@ -872,7 +887,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📢 Visibilité multi-canal intensive</div>
+            <div class="category-title">Visibilité multi-canal intensive</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Mention mensuelle dans l'infolettre (3x sur 3 mois)</div>
               <div class="inclusion-item">Posts LinkedIn premium (9 posts total) : 1 post SaaSpasse custom/mois, 1 post François Lanthier Nadeau/mois, 1 post "offres du mois" SaaSpasse/mois</div>
@@ -881,13 +896,13 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎪 Présence événementielle</div>
+            <div class="category-title">Présence événementielle</div>
             <div class="inclusion-list">
               <div class="inclusion-item">3 billets gratuits pour événements (1 événement si applicable, excluant la conférence annuelle)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📊 Analytics & support premium</div>
+            <div class="category-title">Analytics & support premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Tableau de bord live (vues page, CTR, vues offres, impressions réseaux, OR infolettre, écoutes podcast)</div>
               <div class="inclusion-item">Rapport interactif de fin de contrat</div>
@@ -895,7 +910,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🔄 Fin de contrat</div>
+            <div class="category-title">Fin de contrat</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Arrêt progressif des relais externes (visibilité sur médias)</div>
               <div class="inclusion-item">Badge "employeur premium" conservé 3 mois</div>
@@ -915,7 +930,7 @@
     <div id="product-6" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">🎙️ Forfait host</div>
+          <div class="product-title">Forfait host</div>
           <div class="product-price">2 000 $ / événement</div>
         </div>
         <p>Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse dans leurs locaux, combinant networking, production professionnelle et visibilité de marque.</p>
@@ -938,7 +953,7 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">✅ Partenaires confirmés</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
               <a href="https://www.nexapp.ca/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Nexapp</a>
@@ -949,7 +964,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">📍 Logistique & production</div>
+            <div class="category-title">Logistique & production</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Gestion complète de l'audience : 75-150 personnes</div>
               <div class="inclusion-item">Gestion billetterie : SaaSpasse s'occupe de la vente de billets</div>
@@ -958,7 +973,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎬 Contenu & distribution</div>
+            <div class="category-title">Contenu & distribution</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Publication podcast : Diffusion sur le feed SaaSpasse</div>
               <div class="inclusion-item">Publication YouTube : Mise en ligne sur la chaîne</div>
@@ -967,7 +982,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">🎙️ Format d'événement</div>
+            <div class="category-title">Format d'événement</div>
             <div class="inclusion-list">
               <div class="inclusion-item">18:00-19:00 : Networking + bouffe & drinks</div>
               <div class="inclusion-item">19:00-20:15 : Podcast live devant audience</div>
@@ -975,7 +990,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📅 Processus & timeline</div>
+            <div class="category-title">Processus & timeline</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Promotion : Débute ~1 mois avant l'événement</div>
               <div class="inclusion-item">Questions : Envoyées ~7 jours d'avance</div>
@@ -983,14 +998,14 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">💰 Modèle économique</div>
+            <div class="category-title">Modèle économique</div>
             <div class="inclusion-list">
               <div class="inclusion-item">SaaSpasse gère : Production, captation, montage, billetterie, promotion</div>
               <div class="inclusion-item">Organisation Host fournit : Venue + bouffe & drinks (budget 2 500 $)</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📊 Références sold-out</div>
+            <div class="category-title">Références sold-out</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Ep.139 - Jimmy Plante (live @Folks)</div>
               <div class="inclusion-item">Ep.125 - Serge Beauchemin (live @Espace CDPQ)</div>
@@ -1011,13 +1026,13 @@
     <div id="product-7" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">💼 Job board premium</div>
+          <div class="product-title">Job board premium</div>
           <div class="product-price">400 $</div>
         </div>
         <p>Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, contenus enrichis et promotion multi-canal pour maximiser la portée et l'efficacité du recrutement.</p>
 
         <div style="margin-top: 16px; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 4px solid #ffc107;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">🚧 Coming soon</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">Coming soon</h3>
           <p style="margin: 0; font-size: 0.9rem; color: #856404;">Le job board premium sera disponible avec la plateforme SaaSpasse v2. Pour l'instant, les offres d'emploi sont publiées gratuitement. <a href="mailto:bonjourhi@saaspasse.com?subject=Job board premium" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Contactez-nous</a> pour être informé du lancement.</p>
         </div>
 
@@ -1031,7 +1046,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">💰 Tarification & conditions</div>
+            <div class="category-title">Tarification & conditions</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Prix mensuel : 400 $/mois</div>
               <div class="inclusion-item">Pack 3 mois : 1 020 $ (économie de 15%)</div>
@@ -1041,7 +1056,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📄 Contenu & visibilité</div>
+            <div class="category-title">Contenu & visibilité</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Champs enrichis : Tous les champs gratuits + médias</div>
               <div class="inclusion-item">Vidéo "Mot du fondateur" (<1 min)</div>
@@ -1054,7 +1069,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📢 Promotion multicanale</div>
+            <div class="category-title">Promotion multicanale</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Infolettre : Mention hebdomadaire (1 000 abonnés) = 4 mentions/mois</div>
               <div class="inclusion-item">LinkedIn : Post mensuel + repartage Frank (4 900 abonnés)</div>
@@ -1063,7 +1078,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📆 Outils & support</div>
+            <div class="category-title">Outils & support</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Tableau de bord : Analytics en libre-service (vues, clics, CTR)</div>
               <div class="inclusion-item">Support personnalisé : Conseils + bouton "Besoin d'aide"</div>
@@ -1085,7 +1100,7 @@
     <div id="product-8" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">🍽️ Founder dinners</div>
+          <div class="product-title">Founder dinners</div>
           <div class="product-price">2 000 $ / dinner</div>
         </div>
         <p>Événements exclusifs de networking et de fun autour d'une bonne bouffe. Offre aux commanditaires un accès privilégié à des fondateurs de qualité le temps d'une soirée.</p>
@@ -1108,7 +1123,7 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">✅ Partenaires confirmés</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
               <a href="https://www.bflcanada.ca/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">BFL</a>
@@ -1118,7 +1133,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🍽️ Événement exclusif</div>
+            <div class="category-title">Événement exclusif</div>
             <div class="inclusion-list">
               <div class="inclusion-item">1 souper avec 15-30 fondateurs générant >1M$ de revenus annuels - Accès priviligié à des entrepreneurs accomplis</div>
               <div class="inclusion-item">Pitch dédié de 5-10 minutes au milieu du souper - Opportunité de présentation directe à une audience qualifiée</div>
@@ -1149,7 +1164,7 @@
     <div id="product-9" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">📧 Infolettre SaaSpal</div>
+          <div class="product-title">Infolettre SaaSpal</div>
           <div class="product-price">65 $</div>
         </div>
         <p>Infolettre premium hebdomadaire offrant contenu exclusif, accès privilégié aux événements et interaction directe avec l'écosystème SaaSpasse pour les professionnels tech les plus engagés.</p>
@@ -1163,24 +1178,24 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">🏆 SaaSpal most popular - 65$/an</div>
+            <div class="category-title">SaaSpal most popular - 65$/an</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Chaque semaine, dans ton inbox</div>
-              <div class="inclusion-item">50% rabais sur tous événements 🎟️</div>
-              <div class="inclusion-item">FAQ (Frank Answers Questions) 🙋‍♂️</div>
-              <div class="inclusion-item">Soumettre questions aux invités du pod 👋</div>
-              <div class="inclusion-item">Preview de la roadmap du pod 👀</div>
-              <div class="inclusion-item">Shoutout et remerciement dans un prochain pod 🎧</div>
+              <div class="inclusion-item">50% rabais sur tous événements</div>
+              <div class="inclusion-item">FAQ (Frank Answers Questions)</div>
+              <div class="inclusion-item">Soumettre questions aux invités du pod</div>
+              <div class="inclusion-item">Preview de la roadmap du pod</div>
+              <div class="inclusion-item">Shoutout et remerciement dans un prochain pod</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">📏 SaaSpal standard - 7$/mois = 84$/an</div>
+            <div class="category-title">SaaSpal standard - 7$/mois = 84$/an</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Chaque semaine, dans ton inbox</div>
-              <div class="inclusion-item">25% rabais sur tous événements 🎟️</div>
-              <div class="inclusion-item">FAQ (Frank Answers Questions) 🙋‍♂️</div>
-              <div class="inclusion-item">Soumettre questions aux invités du pod 👋</div>
-              <div class="inclusion-item">Preview de la roadmap du pod 👀</div>
+              <div class="inclusion-item">25% rabais sur tous événements</div>
+              <div class="inclusion-item">FAQ (Frank Answers Questions)</div>
+              <div class="inclusion-item">Soumettre questions aux invités du pod</div>
+              <div class="inclusion-item">Preview de la roadmap du pod</div>
             </div>
           </div>
         </div>
@@ -1188,10 +1203,10 @@
         <div style="margin-top: 16px; padding: 12px; background: #e8f5e8; border-radius: 6px; border-left: 4px solid #28a745;">
           <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #155724;">Avantages exclusifs inclus</h4>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.85rem; color: #155724;">
-            <div><strong>💰 Économies événements :</strong> Jusqu'à 50% de réduction</div>
-            <div><strong>🎧 Interaction podcast :</strong> Influence directe sur le contenu</div>
-            <div><strong>📏 Contenu exclusif :</strong> FAQ et insights privilégiés</div>
-            <div><strong>👀 Accès anticipé :</strong> Preview des nouveautés</div>
+            <div><strong>Économies événements :</strong> Jusqu'à 50% de réduction</div>
+            <div><strong>Interaction podcast :</strong> Influence directe sur le contenu</div>
+            <div><strong>Contenu exclusif :</strong> FAQ et insights privilégiés</div>
+            <div><strong>Accès anticipé :</strong> Preview des nouveautés</div>
           </div>
         </div>
 
