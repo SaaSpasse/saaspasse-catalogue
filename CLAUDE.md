@@ -26,3 +26,7 @@ git add .
 git commit -m "Description du changement"
 git push origin main
 ```
+
+## Améliorations futures
+
+- **Section témoignages par produit** - Ajouter des témoignages de partenaires/clients pour chaque produit du catalogue
