@@ -12,6 +12,11 @@
       --light-purple: #AD80FF;
       --dark: #070A26;
       --cream: #ECEBF1;
+      /* Wash colors from daybits */
+      --wash-blue: #E8F0FF;
+      --wash-green: #E0FFF7;
+      --wash-amber: #FFF8E0;
+      --wash-rose: #FFF0F3;
     }
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -100,15 +105,15 @@
       border-radius: 50%;
       margin-left: 6px;
     }
-    .availability-high { background: #28a745; color: #28a745; }
-    .availability-medium { background: #ffc107; color: #ffc107; }
-    .availability-low { background: #dc3545; color: #dc3545; }
-    .availability-full { background: #6c757d; color: #6c757d; }
+    .availability-high { background: #3D9970; color: #3D9970; }
+    .availability-medium { background: #FFAB00; color: #FFAB00; }
+    .availability-low { background: #E8726A; color: #E8726A; }
+    .availability-full { background: #999; color: #999; }
 
-    .availability-text-high { color: #28a745; font-weight: 600; }
-    .availability-text-medium { color: #ffc107; font-weight: 600; }
-    .availability-text-low { color: #dc3545; font-weight: 600; }
-    .availability-text-full { color: #6c757d; font-weight: 600; }
+    .availability-text-high { color: #3D9970; font-weight: 600; }
+    .availability-text-medium { color: #FFAB00; font-weight: 600; }
+    .availability-text-low { color: #E8726A; font-weight: 600; }
+    .availability-text-full { color: #999; font-weight: 600; }
 
     .product-overview {
       background: white;
@@ -221,9 +226,9 @@
     .audience-metrics {
       margin-top: 16px;
       padding: 12px;
-      background: #e8f5e8;
+      background: var(--wash-green);
       border-radius: 6px;
-      border-left: 4px solid #28a745;
+      border-left: 4px solid var(--purple);
     }
     .metrics-grid {
       display: grid;
@@ -238,7 +243,7 @@
     .metric-item b {
       display: block;
       font-size: 1.1rem;
-      color: #28a745;
+      color: var(--dark);
     }
 
     .hidden { display: none; }
@@ -376,7 +381,7 @@
         <p>Rejoignez l'écosystème SaaSpasse et bénéficiez d'une visibilité premium auprès de la communauté tech québécoise la plus engagée.</p>
 
         <div style="display: grid; gap: 12px; margin-top: 20px;">
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: #f0f0f0; border-radius: 4px;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: var(--cream); border-radius: 4px;">
             <span>Produit</span>
             <span>Prix</span>
             <span>Durée</span>
@@ -473,7 +478,7 @@
           <div class="meta-item"><b>Exclusif</b><span>programme premium</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -567,7 +572,7 @@
           <div class="meta-item"><b>3.5-16K $</b><span>prix selon forfait</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
           <h3 style="margin: 0 0 12px 0; font-size: 1rem; color: #333;">• Partenaires confirmés par forfait</h3>
           <div style="display: grid; gap: 12px; font-size: 0.9rem;">
             <div>
@@ -681,9 +686,9 @@
           <div class="meta-item"><b>Sur invitation</b><span>accès exclusif</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 4px solid #ffc107;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">• Liste d'attente</h3>
-          <p style="margin: 0; font-size: 0.9rem; color: #856404;">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--dark);">• Liste d'attente</h3>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
         </div>
 
 
@@ -752,7 +757,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -952,7 +957,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -1031,9 +1036,9 @@
         </div>
         <p>Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, contenus enrichis et promotion multi-canal pour maximiser la portée et l'efficacité du recrutement.</p>
 
-        <div style="margin-top: 16px; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 4px solid #ffc107;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #856404;">Coming soon</h3>
-          <p style="margin: 0; font-size: 0.9rem; color: #856404;">Le job board premium sera disponible avec la plateforme SaaSpasse v2. Pour l'instant, les offres d'emploi sont publiées gratuitement. <a href="mailto:bonjourhi@saaspasse.com?subject=Job board premium" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Contactez-nous</a> pour être informé du lancement.</p>
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--dark);">Coming soon</h3>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">Le job board premium sera disponible avec la plateforme SaaSpasse v2. Pour l'instant, les offres d'emploi sont publiées gratuitement. <a href="mailto:bonjourhi@saaspasse.com?subject=Job board premium" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Contactez-nous</a> pour être informé du lancement.</p>
         </div>
 
         <div class="product-meta">
@@ -1122,7 +1127,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #f0f7ff; border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -1142,9 +1147,9 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #fff3cd; border-radius: 6px; border-left: 4px solid #ffc107;">
-          <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #856404;">Avantages stratégiques</h4>
-          <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem; color: #856404;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+          <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: var(--dark);">Avantages stratégiques</h4>
+          <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem; color: var(--dark);">
             <li><strong>Accès direct :</strong> Aux décideurs les plus influents du milieu</li>
             <li><strong>Crédibilité :</strong> Association avec l'écosystème entrepreneurial de pointe</li>
             <li><strong>ROI élevé :</strong> Concentration d'opportunités business en une soirée</li>
@@ -1200,9 +1205,9 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: #e8f5e8; border-radius: 6px; border-left: 4px solid #28a745;">
-          <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: #155724;">Avantages exclusifs inclus</h4>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.85rem; color: #155724;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-green); border-radius: 6px; border-left: 4px solid var(--purple);">
+          <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: var(--dark);">Avantages exclusifs inclus</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.85rem; color: var(--dark);">
             <div><strong>Économies événements :</strong> Jusqu'à 50% de réduction</div>
             <div><strong>Interaction podcast :</strong> Influence directe sur le contenu</div>
             <div><strong>Contenu exclusif :</strong> FAQ et insights privilégiés</div>
