@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Catalogue SaaSpasse 2026 — Opportunités de Partenariat</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23853DFF%22 stroke-width=%222%22><rect x=%222%22 y=%227%22 width=%2220%22 height=%2214%22 rx=%222%22/><path d=%22M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --w: 1200px;
@@ -12,21 +15,30 @@
       --light-purple: #AD80FF;
       --dark: #070A26;
       --cream: #ECEBF1;
-      /* Wash colors from daybits */
       --wash-blue: #E8F0FF;
       --wash-green: #E0FFF7;
       --wash-amber: #FFF8E0;
       --wash-rose: #FFF0F3;
     }
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
       margin: 0;
       padding: 32px 24px;
       color: var(--dark);
       background: var(--cream);
+      position: relative;
     }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
     .wrap { max-width: var(--w); margin: 0 auto; }
-    h1, h2, h3 { margin: 0 0 12px; font-weight: 600; }
+    h1, h2, h3 { margin: 0 0 12px; font-weight: 700; }
     h1 { font-size: 1.75rem; margin-bottom: 8px; }
     h2 { font-size: 1.25rem; margin-top: 20px; }
     h3 { font-size: 1.1rem; color: #555; }
@@ -34,54 +46,67 @@
 
     .header {
       background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
       padding: 28px;
       margin-bottom: 28px;
       text-align: center;
+      box-shadow: 4px 4px 0 var(--dark);
+    }
+    .header-logo {
+      height: 36px;
+      margin-bottom: 12px;
     }
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
+      gap: 16px;
       margin: 20px 0;
     }
     .stat {
-      border: none;
-      border-radius: 4px;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
       padding: 16px;
-      background: var(--cream);
       text-align: center;
+      transition: transform 0.15s ease;
     }
-    .stat b { display: block; font-size: 1.5rem; color: var(--purple); font-weight: 600; }
-    .stat span { font-size: 0.85rem; color: #666; }
+    .stat:hover { transform: translateY(-2px); }
+    .stat:nth-child(1) { background: var(--wash-green); }
+    .stat:nth-child(2) { background: var(--wash-rose); }
+    .stat:nth-child(3) { background: var(--wash-amber); }
+    .stat:nth-child(4) { background: var(--wash-blue); }
+    .stat:nth-child(5) { background: var(--wash-green); }
+    .stat b { display: block; font-size: 1.5rem; color: var(--dark); font-weight: 700; }
+    .stat span { font-size: 0.85rem; color: #555; }
 
     .nav-tabs {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 6px;
       margin: 24px 0;
-      border-bottom: 2px solid #e0e0e0;
       padding-bottom: 0;
     }
     .tab {
-      border: none;
-      border-radius: 0;
-      padding: 10px 16px;
-      background: transparent;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      padding: 8px 14px;
+      background: white;
       cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.2s;
-      border-bottom: 2px solid transparent;
-      margin-bottom: -2px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.15s;
     }
     .tab.active {
-      background: transparent;
-      border-bottom: 2px solid var(--purple);
+      background: var(--purple);
+      color: white;
+      border-color: var(--dark);
       font-weight: 600;
-      color: var(--purple);
+      box-shadow: 2px 2px 0 var(--dark);
     }
-    .tab:hover { color: var(--purple); }
+    .tab:not(.active):hover {
+      border-color: var(--dark);
+      transform: translateY(-1px);
+    }
 
     .icon {
       width: 16px;
@@ -95,8 +120,8 @@
       stroke-linejoin: round;
       fill: none;
     }
-    .tab .icon { opacity: 0.7; }
-    .tab.active .icon { opacity: 1; }
+    .tab .icon { opacity: 0.6; }
+    .tab.active .icon { opacity: 1; stroke: white; }
 
     .availability-indicator {
       display: inline-block;
@@ -117,10 +142,11 @@
 
     .product-overview {
       background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
       padding: 28px;
       margin-bottom: 20px;
+      box-shadow: 4px 4px 0 var(--dark);
     }
     .product-header {
       display: flex;
@@ -139,9 +165,11 @@
       background: var(--purple);
       color: white;
       padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
+      border-radius: 6px;
+      font-weight: 700;
       font-size: 0.9rem;
+      border: 2px solid var(--dark);
+      box-shadow: 2px 2px 0 var(--dark);
     }
     .product-meta {
       display: grid;
@@ -150,7 +178,8 @@
       margin: 16px 0;
       padding: 16px;
       background: var(--cream);
-      border-radius: 4px;
+      border-radius: 6px;
+      border: 1px solid #d0d0d5;
     }
     .meta-item { font-size: 0.85rem; }
     .meta-item b { display: block; font-size: 0.95rem; color: var(--dark); font-weight: 600; }
@@ -174,8 +203,8 @@
     }
     .inclusion-item {
       background: var(--cream);
-      border: none;
-      border-radius: 4px;
+      border: 1px solid #d0d0d5;
+      border-radius: 6px;
       padding: 10px 14px;
       font-size: 0.9rem;
       line-height: 1.5;
@@ -185,42 +214,49 @@
       margin-top: 24px;
       padding: 24px;
       background: var(--cream);
-      border-radius: 4px;
+      border-radius: 6px;
       text-align: center;
+      border: 1px solid #d0d0d5;
     }
     .btn-primary {
       background: var(--purple);
       color: white;
       padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 600;
+      font-family: inherit;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       margin: 0 8px 8px 0;
-      transition: background 0.2s;
+      transition: all 0.15s;
+      box-shadow: 3px 3px 0 var(--dark);
     }
     .btn-primary:hover {
-      background: var(--light-purple);
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 var(--dark);
     }
     .btn-secondary {
       background: white;
       color: var(--dark);
       padding: 12px 24px;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
       font-size: 0.9rem;
+      font-weight: 500;
+      font-family: inherit;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
       margin: 0 8px 8px 0;
-      transition: all 0.2s;
+      transition: all 0.15s;
+      box-shadow: 3px 3px 0 var(--dark);
     }
     .btn-secondary:hover {
-      border-color: var(--purple);
-      color: var(--purple);
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 var(--dark);
     }
 
     .audience-metrics {
@@ -228,6 +264,7 @@
       padding: 12px;
       background: var(--wash-green);
       border-radius: 6px;
+      border: 1px solid #d0d0d5;
       border-left: 4px solid var(--purple);
     }
     .metrics-grid {
@@ -244,6 +281,46 @@
       display: block;
       font-size: 1.1rem;
       color: var(--dark);
+    }
+
+    .testimonials-section {
+      margin-top: 28px;
+    }
+    .testimonials-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .testimonial-card {
+      background: white;
+      border: 2px solid var(--dark);
+      border-radius: 6px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 3px 3px 0 var(--dark);
+    }
+    .testimonial-card:nth-child(1) { border-left: 5px solid var(--purple); }
+    .testimonial-card:nth-child(2) { border-left: 5px solid #3D9970; }
+    .testimonial-card:nth-child(3) { border-left: 5px solid #FFAB00; }
+    .testimonial-quote {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--dark);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .testimonial-author {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: #666;
     }
 
     .hidden { display: none; }
@@ -339,24 +416,29 @@
   </div>
   <div class="wrap">
     <div class="header">
-      <h1>Catalogue SaaSpasse 2026</h1>
+      <img src="assets/logo-saaspasse.png" alt="SaaSpasse" class="header-logo">
+      <h1>Catalogue 2026</h1>
       <p class="small muted">Opportunités de partenariats et commandites avec l'audience tech la plus qualifiée au Québec.</p>
       <div class="stats">
         <div class="stat">
-          <b>6K+</b>
-          <span>Écoutes podcast/mois</span>
+          <b>16K+</b>
+          <span>Abonnés combinés</span>
         </div>
         <div class="stat">
-          <b>2.5K+</b>
-          <span>Sessions web/mois</span>
+          <b>170+</b>
+          <span>Épisodes podcast</span>
         </div>
         <div class="stat">
-          <b>40K+</b>
-          <span>Impressions social/mois</span>
+          <b>58%</b>
+          <span>Open rate infolettre</span>
         </div>
         <div class="stat">
-          <b>>9K</b>
-          <span>Abonnés multi-plateforme</span>
+          <b>80%</b>
+          <span>Events sold-out</span>
+        </div>
+        <div class="stat">
+          <b>100%</b>
+          <span>Audience tech Québec</span>
         </div>
       </div>
     </div>
@@ -450,6 +532,27 @@
             <span>12 mois</span>
             <span>Illimité</span>
             <span class="availability-text-high">N/A</span>
+          </div>
+        </div>
+
+        <div class="testimonials-section">
+          <h2>Ce que nos partenaires disent</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-quote">"Commanditer SaaSpasse a été un net positif pour nous; exposition à plus de compagnies clients potentiels, génération de leads, et belles rencontres aux événements! ROI positif."</div>
+              <div class="testimonial-author">David Beauchemin</div>
+              <div class="testimonial-role">Président, Baseline</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">"Quelle belle surprise que d'avoir un ROI 400% le même mois de la promo spotlight, en plus d'avoir des gens qui viennent me parler de la vidéo YouTube."</div>
+              <div class="testimonial-author">Émilie Carignan</div>
+              <div class="testimonial-role">Fractional CMO, The Letter Em</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-quote">"Nous avons généré plusieurs ventes directes, en plus d'ouvrir de belles discussions avec d'autres fondateurs. François a été all-in pour nous faire briller."</div>
+              <div class="testimonial-author">Benoit Quimper</div>
+              <div class="testimonial-role">Co-fondateur, Jameo</div>
+            </div>
           </div>
         </div>
 
