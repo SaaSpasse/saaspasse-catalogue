@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Catalogue SaaSpasse 2026 — Opportunités de Partenariat</title>
+  <meta name="description" content="Partenariats et commandites avec l'audience tech la plus qualifiée au Québec. Podcast, événements, infolettre, communauté.">
+  <meta property="og:title" content="Catalogue SaaSpasse 2026">
+  <meta property="og:description" content="Opportunités de partenariats et commandites avec l'audience tech la plus qualifiée au Québec.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://catalogue.saaspasse.com">
+  <meta name="theme-color" content="#853DFF">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23853DFF%22 stroke-width=%222%22><rect x=%222%22 y=%227%22 width=%2220%22 height=%2214%22 rx=%222%22/><path d=%22M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16%22/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,22 +45,23 @@
     body > * { position: relative; z-index: 1; }
     .wrap { max-width: var(--w); margin: 0 auto; }
     h1, h2, h3 { margin: 0 0 12px; font-weight: 700; }
-    h1 { font-size: 1.75rem; margin-bottom: 8px; }
-    h2 { font-size: 1.25rem; margin-top: 20px; }
-    h3 { font-size: 1.1rem; color: #555; }
+    h1 { font-size: 2.2rem; margin-bottom: 8px; }
+    h2 { font-size: 1.3rem; margin-top: 24px; }
+    h3 { font-size: 1rem; color: #555; font-weight: 600; }
     p { margin: 8px 0 14px; line-height: 1.6; }
 
     .header {
-      background: white;
-      border: 2px solid var(--dark);
-      border-radius: 6px;
+      background: linear-gradient(180deg, #faf8ff 0%, white 100%);
+      border: 1.5px solid var(--dark);
+      border-radius: 8px;
       padding: 28px;
       margin-bottom: 28px;
       text-align: center;
-      box-shadow: 4px 4px 0 var(--dark);
+      box-shadow: 3px 3px 0 rgba(7, 10, 38, 0.15);
     }
     .header-logo {
       height: 36px;
+      width: auto;
       margin-bottom: 12px;
     }
     .stats {
@@ -63,31 +70,34 @@
       gap: 16px;
       margin: 20px 0;
     }
-    .stat {
-      border: 2px solid var(--dark);
-      border-radius: 6px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.15s ease;
+    .confidence-strip {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 12px;
+      letter-spacing: 0.01em;
     }
-    .stat:hover { transform: translateY(-2px); }
-    .stat:nth-child(1) { background: var(--wash-green); }
-    .stat:nth-child(2) { background: var(--wash-rose); }
-    .stat:nth-child(3) { background: var(--wash-amber); }
-    .stat:nth-child(4) { background: var(--wash-blue); }
-    .stat:nth-child(5) { background: var(--wash-green); }
-    .stat b { display: block; font-size: 1.5rem; color: var(--dark); font-weight: 700; }
-    .stat span { font-size: 0.85rem; color: #555; }
+    .confidence-strip .sep {
+      margin: 0 8px;
+      color: #bbb;
+    }
+    .confidence-strip b {
+      font-weight: 600;
+      color: var(--purple);
+    }
 
     .nav-tabs {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
       margin: 24px 0;
-      padding-bottom: 0;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--cream);
     }
     .tab {
-      border: 2px solid transparent;
+      border: 1px solid #e0e0e5;
       border-radius: 6px;
       padding: 8px 14px;
       background: white;
@@ -99,13 +109,16 @@
     .tab.active {
       background: var(--purple);
       color: white;
-      border-color: var(--dark);
+      border-color: var(--purple);
       font-weight: 600;
-      box-shadow: 2px 2px 0 var(--dark);
     }
     .tab:not(.active):hover {
-      border-color: var(--dark);
-      transform: translateY(-1px);
+      border-color: #ccc;
+      background: #f8f7fb;
+    }
+    .tab:focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 2px;
     }
 
     .icon {
@@ -142,11 +155,10 @@
 
     .product-overview {
       background: white;
-      border: 2px solid var(--dark);
-      border-radius: 6px;
+      border: 1px solid #d0d0d5;
+      border-radius: 8px;
       padding: 28px;
       margin-bottom: 20px;
-      box-shadow: 4px 4px 0 var(--dark);
     }
     .product-header {
       display: flex;
@@ -157,8 +169,8 @@
       gap: 12px;
     }
     .product-title {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 700;
       color: var(--dark);
     }
     .product-price {
@@ -166,10 +178,8 @@
       color: white;
       padding: 8px 16px;
       border-radius: 6px;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.9rem;
-      border: 2px solid var(--dark);
-      box-shadow: 2px 2px 0 var(--dark);
     }
     .product-meta {
       display: grid;
@@ -177,9 +187,8 @@
       gap: 12px;
       margin: 16px 0;
       padding: 16px;
-      background: var(--cream);
-      border-radius: 6px;
-      border: 1px solid #d0d0d5;
+      background: #f5f0ff;
+      border-radius: 8px;
     }
     .meta-item { font-size: 0.85rem; }
     .meta-item b { display: block; font-size: 0.95rem; color: var(--dark); font-weight: 600; }
@@ -192,37 +201,45 @@
       margin-bottom: 20px;
     }
     .category-title {
-      font-weight: 600;
+      font-weight: 700;
       color: var(--dark);
-      margin-bottom: 10px;
-      font-size: 1rem;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
     }
     .inclusion-list {
       display: grid;
       gap: 8px;
     }
     .inclusion-item {
-      background: var(--cream);
-      border: 1px solid #d0d0d5;
-      border-radius: 6px;
-      padding: 10px 14px;
+      padding: 4px 0 4px 18px;
       font-size: 0.9rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      position: relative;
+    }
+    .inclusion-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
+      opacity: 0.5;
     }
 
     .cta-section {
-      margin-top: 24px;
-      padding: 24px;
-      background: var(--cream);
-      border-radius: 6px;
+      margin-top: 32px;
+      padding: 28px;
+      background: linear-gradient(135deg, #f5f0ff 0%, #f8f7fb 100%);
+      border-radius: 8px;
       text-align: center;
-      border: 1px solid #d0d0d5;
     }
     .btn-primary {
       background: var(--purple);
       color: white;
       padding: 12px 24px;
-      border: 2px solid var(--dark);
+      border: none;
       border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 600;
@@ -232,17 +249,15 @@
       display: inline-block;
       margin: 0 8px 8px 0;
       transition: all 0.15s;
-      box-shadow: 3px 3px 0 var(--dark);
     }
     .btn-primary:hover {
-      transform: translate(1px, 1px);
-      box-shadow: 2px 2px 0 var(--dark);
+      background: #7030e6;
     }
     .btn-secondary {
       background: white;
       color: var(--dark);
       padding: 12px 24px;
-      border: 2px solid var(--dark);
+      border: 1px solid #d0d0d5;
       border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 500;
@@ -252,20 +267,17 @@
       display: inline-block;
       margin: 0 8px 8px 0;
       transition: all 0.15s;
-      box-shadow: 3px 3px 0 var(--dark);
     }
     .btn-secondary:hover {
-      transform: translate(1px, 1px);
-      box-shadow: 2px 2px 0 var(--dark);
+      border-color: var(--purple);
+      color: var(--purple);
     }
 
     .audience-metrics {
       margin-top: 16px;
       padding: 12px;
-      background: var(--wash-green);
-      border-radius: 6px;
-      border: 1px solid #d0d0d5;
-      border-left: 4px solid var(--purple);
+      background: #f5f0ff;
+      border-radius: 8px;
     }
     .metrics-grid {
       display: grid;
@@ -297,15 +309,11 @@
     }
     .testimonial-card {
       background: white;
-      border: 2px solid var(--dark);
-      border-radius: 6px;
+      border: 1px solid #d0d0d5;
+      border-radius: 8px;
       padding: 20px;
       position: relative;
-      box-shadow: 3px 3px 0 var(--dark);
     }
-    .testimonial-card:nth-child(1) { border-left: 5px solid var(--purple); }
-    .testimonial-card:nth-child(2) { border-left: 5px solid #3D9970; }
-    .testimonial-card:nth-child(3) { border-left: 5px solid #FFAB00; }
     .testimonial-quote {
       font-size: 0.9rem;
       line-height: 1.6;
@@ -323,7 +331,22 @@
       color: #666;
     }
 
+    .table-row {
+      cursor: pointer;
+      transition: background 0.1s ease;
+      border-radius: 4px;
+    }
+    .table-row span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .table-row:hover {
+      background: #f5f0ff;
+    }
+    .availability-text-open { color: #3D9970; font-weight: 600; }
+    .product-content { animation: fadeIn 0.2s ease; }
     .hidden { display: none; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .small { font-size: 0.85rem; color: #666; }
     .muted { color: #888; }
 
@@ -390,70 +413,110 @@
     }
 
     @media (max-width: 768px) {
+      body { padding: 16px 12px; }
+      h1 { font-size: 1.6rem; }
+      .header { padding: 20px 16px; }
+      .header-logo { height: 28px; }
+      .confidence-strip { font-size: 0.75rem; line-height: 1.8; }
+      .confidence-strip .sep { margin: 0 4px; }
       .product-header { flex-direction: column; }
-      .product-meta { grid-template-columns: 1fr; }
-      .nav-tabs { justify-content: center; }
+      .product-title { font-size: 1.2rem; }
+      .product-meta { grid-template-columns: 1fr 1fr; }
+      .product-overview { padding: 20px 16px; }
+      .nav-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        gap: 6px;
+        padding: 10px 0;
+        scrollbar-width: none;
+      }
+      .nav-tabs::-webkit-scrollbar { display: none; }
+      .tab { white-space: nowrap; flex-shrink: 0; font-size: 0.8rem; padding: 6px 12px; }
+      .table-row, [style*="grid-template-columns: 2fr"] {
+        font-size: 0.78rem;
+      }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 16px; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .cta-section { padding: 20px 16px; }
+      .btn-primary, .btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 8px 0;
+        box-sizing: border-box;
+      }
+      .inclusion-item { font-size: 0.85rem; }
+      .category-title { font-size: 0.95rem; }
       .saaspaladin-container {
         bottom: 10px;
         right: -20px;
       }
       .saaspaladin {
-        width: 120px;
+        width: 100px;
       }
       .speech-bubble {
-        bottom: 110px;
-        right: 70px;
-        font-size: 0.75rem;
-        padding: 8px 12px;
+        bottom: 90px;
+        right: 60px;
+        font-size: 0.7rem;
+        padding: 8px 10px;
       }
+    }
+
+    @media (max-width: 480px) {
+      .product-meta { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .confidence-strip { text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      body::before { display: none; }
+      .nav-tabs, .saaspaladin-container { display: none; }
+      .product-content { display: block !important; page-break-inside: avoid; }
+      .hidden { display: block !important; }
+      .product-overview { border: 1px solid #ddd; box-shadow: none; margin-bottom: 24px; }
+      .btn-primary, .btn-secondary { border: 1px solid #999; background: white; color: #333; box-shadow: none; }
+      a { color: #853DFF; }
+      a[href^="mailto"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
     }
   </style>
 </head>
 <body>
   <div class="saaspaladin-container">
     <div class="speech-bubble" id="saaspaladin-speech">Chevalier doit manger 🛡️</div>
-    <img src="assets/saaspaladin.png" alt="SaaSpaladin" class="saaspaladin">
+    <img src="assets/saaspaladin-opt.png" alt="SaaSpaladin" class="saaspaladin" loading="lazy" width="180" height="180">
   </div>
   <div class="wrap">
     <div class="header">
-      <img src="assets/logo-saaspasse.png" alt="SaaSpasse" class="header-logo">
+      <img src="assets/logo-saaspasse.png" alt="SaaSpasse" class="header-logo" width="387" height="80">
       <h1>Catalogue 2026</h1>
       <p class="small muted">Opportunités de partenariats et commandites avec l'audience tech la plus qualifiée au Québec.</p>
-      <div class="stats">
-        <div class="stat">
-          <b>16K+</b>
-          <span>Abonnés combinés</span>
-        </div>
-        <div class="stat">
-          <b>170+</b>
-          <span>Épisodes podcast</span>
-        </div>
-        <div class="stat">
-          <b>58%</b>
-          <span>Open rate infolettre</span>
-        </div>
-        <div class="stat">
-          <b>80%</b>
-          <span>Events sold-out</span>
-        </div>
-        <div class="stat">
-          <b>100%</b>
-          <span>Audience tech Québec</span>
-        </div>
+      <div class="confidence-strip">
+        <b>16K+</b> abonnés<span class="sep">·</span><b>170+</b> épisodes<span class="sep">·</span><b>58%</b> open rate<span class="sep">·</span><b>80%</b> events sold-out<span class="sep">·</span><b>100%</b> tech QC
       </div>
     </div>
 
-    <div class="nav-tabs">
-      <div class="tab active" onclick="showProduct('overview')"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Vue d'ensemble</div>
-      <div class="tab" onclick="showProduct('product-1')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Annuels certifiés</div>
-      <div class="tab" onclick="showProduct('product-2')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Conférence</div>
-      <div class="tab" onclick="showProduct('product-5')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Employeur</div>
-      <div class="tab" onclick="showProduct('product-4')"><svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Spotlight</div>
-      <div class="tab" onclick="showProduct('product-3')"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Communauté</div>
-      <div class="tab" onclick="showProduct('product-6')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Forfait host</div>
-      <div class="tab" onclick="showProduct('product-8')"><svg class="icon" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Dinners</div>
-      <div class="tab" onclick="showProduct('product-7')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job board</div>
-      <div class="tab" onclick="showProduct('product-9')"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Infolettre</div>
+    <div class="nav-tabs" role="tablist" aria-label="Produits SaaSpasse">
+      <div class="tab active" role="tab" tabindex="0" aria-selected="true" onclick="showProduct('overview')" onkeydown="if(event.key==='Enter')showProduct('overview')"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Vue d'ensemble</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-1')" onkeydown="if(event.key==='Enter')showProduct('product-1')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Annuels certifiés</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-2')" onkeydown="if(event.key==='Enter')showProduct('product-2')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Conférence</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-5')" onkeydown="if(event.key==='Enter')showProduct('product-5')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Employeur</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-4')" onkeydown="if(event.key==='Enter')showProduct('product-4')"><svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Spotlight</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-3')" onkeydown="if(event.key==='Enter')showProduct('product-3')"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Communauté</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-6')" onkeydown="if(event.key==='Enter')showProduct('product-6')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Forfait host</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-8')" onkeydown="if(event.key==='Enter')showProduct('product-8')"><svg class="icon" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Dinners</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-7')" onkeydown="if(event.key==='Enter')showProduct('product-7')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job board</div>
+      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-9')" onkeydown="if(event.key==='Enter')showProduct('product-9')"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Infolettre</div>
     </div>
 
     <!-- Vue d'ensemble -->
@@ -463,75 +526,75 @@
         <p>Rejoignez l'écosystème SaaSpasse et bénéficiez d'une visibilité premium auprès de la communauté tech québécoise la plus engagée.</p>
 
         <div style="display: grid; gap: 12px; margin-top: 20px;">
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: var(--cream); border-radius: 4px;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: #f0ebff; border-radius: 4px;">
             <span>Produit</span>
             <span>Prix</span>
             <span>Durée</span>
             <span>Capacité</span>
             <span>Disponibilité</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-1')">Partenaires annuels certifiés</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-1')">
+            <span style="color: #853DFF; font-weight: 500;">Partenaires annuels certifiés</span>
             <span>Contactez-nous</span>
             <span>12 mois</span>
             <span>5</span>
             <span class="availability-text-full">0</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-2')">Commandites conférence annuelle</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-2')">
+            <span style="color: #853DFF; font-weight: 500;">Commandites conférence annuelle</span>
             <span>3 500-16 000 $</span>
             <span>3 mois</span>
             <span>8</span>
             <span class="availability-text-low">2</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-5')">Employeur premium</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-5')">
+            <span style="color: #853DFF; font-weight: 500;">Employeur premium</span>
             <span>Contactez-nous</span>
             <span>3 mois</span>
             <span>4</span>
             <span class="availability-text-medium">3</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-4')">Partenaires spotlight</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-4')">
+            <span style="color: #853DFF; font-weight: 500;">Partenaires spotlight</span>
             <span>3 500 $</span>
             <span>1 mois</span>
             <span>11</span>
             <span class="availability-text-medium">5</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-3')">Communauté privée</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-3')">
+            <span style="color: #853DFF; font-weight: 500;">Communauté privée</span>
             <span>Contactez-nous</span>
             <span>12 mois</span>
             <span>Sur invitation</span>
             <span class="availability-text-full">Capacité atteinte</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-6')">Forfait host</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-6')">
+            <span style="color: #853DFF; font-weight: 500;">Forfait host</span>
             <span>2 000 $</span>
             <span>1 soirée</span>
             <span>4</span>
             <span class="availability-text-medium">2</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-8')">Founder dinners</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-8')">
+            <span style="color: #853DFF; font-weight: 500;">Founder dinners</span>
             <span>2 000 $</span>
             <span>1 soirée</span>
             <span>3</span>
             <span class="availability-text-medium">2</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-7')">Job board premium</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-7')">
+            <span style="color: #853DFF; font-weight: 500;">Job board premium</span>
             <span>400 $</span>
             <span>1 mois</span>
             <span>Illimité</span>
-            <span class="availability-text-high">N/A</span>
+            <span class="availability-text-open">Ouvert</span>
           </div>
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px;">
-            <span><span style="cursor: pointer; color: #853DFF; text-decoration: underline;" onclick="showProduct('product-9')">Infolettre SaaSpal</span></span>
+          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px;" onclick="showProduct('product-9')">
+            <span style="color: #853DFF; font-weight: 500;">Infolettre SaaSpal</span>
             <span>65 $</span>
             <span>12 mois</span>
             <span>Illimité</span>
-            <span class="availability-text-high">N/A</span>
+            <span class="availability-text-open">Ouvert</span>
           </div>
         </div>
 
@@ -558,7 +621,7 @@
 
         <div class="cta-section">
           <h3>Intéressé?</h3>
-          <p class="small">Contactez-nous pour jaser des opportunités qui fit avec vos objectifs.</p>
+          <p class="small">Contactez-nous pour jaser des opportunités qui correspondent à vos objectifs.</p>
           <a href="mailto:bonjourhi@saaspasse.com" class="btn-primary">Nous contacter</a>
           <a href="https://gamma.app/docs/Media-kit-SaaSpasse-7d6pyz3752fzxrz" target="_blank" class="btn-secondary">Voir Media kit</a>
         </div>
@@ -581,7 +644,7 @@
           <div class="meta-item"><b>Exclusif</b><span>programme premium</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -675,7 +738,7 @@
           <div class="meta-item"><b>3.5-16K $</b><span>prix selon forfait</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 12px 0; font-size: 1rem; color: #333;">• Partenaires confirmés par forfait</h3>
           <div style="display: grid; gap: 12px; font-size: 0.9rem;">
             <div>
@@ -789,7 +852,7 @@
           <div class="meta-item"><b>Sur invitation</b><span>accès exclusif</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--dark);">• Liste d'attente</h3>
           <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
         </div>
@@ -860,7 +923,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -956,7 +1019,7 @@
           <div class="meta-item"><b>26 unités</b><span>bande passante</span></div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -1070,7 +1133,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -1153,7 +1216,7 @@
         </div>
         <p>Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, contenus enrichis et promotion multi-canal pour maximiser la portée et l'efficacité du recrutement.</p>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--dark);">Coming soon</h3>
           <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">Le job board premium sera disponible avec la plateforme SaaSpasse v2. Pour l'instant, les offres d'emploi sont publiées gratuitement. <a href="mailto:bonjourhi@saaspasse.com?subject=Job board premium" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Contactez-nous</a> pour être informé du lancement.</p>
         </div>
@@ -1244,7 +1307,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: 4px solid #853DFF;">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
@@ -1264,7 +1327,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: 4px solid var(--purple);">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: none;">
           <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: var(--dark);">Avantages stratégiques</h4>
           <ul style="margin: 0; padding-left: 16px; font-size: 0.85rem; color: var(--dark);">
             <li><strong>Accès direct :</strong> Aux décideurs les plus influents du milieu</li>
@@ -1322,7 +1385,7 @@
           </div>
         </div>
 
-        <div style="margin-top: 16px; padding: 12px; background: var(--wash-green); border-radius: 6px; border-left: 4px solid var(--purple);">
+        <div style="margin-top: 16px; padding: 12px; background: var(--wash-green); border-radius: 6px; border-left: none;">
           <h4 style="margin: 0 0 8px 0; font-size: 0.9rem; color: var(--dark);">Avantages exclusifs inclus</h4>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; font-size: 0.85rem; color: var(--dark);">
             <div><strong>Économies événements :</strong> Jusqu'à 50% de réduction</div>
@@ -1376,6 +1439,11 @@
 
       // Afficher le contenu sélectionné
       document.getElementById(productId).classList.remove('hidden');
+
+      // Scroll to top of content on mobile
+      if (window.innerWidth <= 768) {
+        document.querySelector('.nav-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
 
       // Activer l'onglet correspondant basé sur le productId
       const tabMapping = {
