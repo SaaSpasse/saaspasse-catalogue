@@ -16,7 +16,7 @@
 | 3 | [Communauté Privée](#3-communauté-privée) | 70 000 $ | 16,0% | 15 | ✅ |
 | 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 6,8% | 9 | ✅ |
 | 5 | [Employeur Premium](#5-employeur-premium) | 20 000 $ | 4,6% | 23 | ✅ |
-| 6 | [Événements Live](#6-événements-live) | 16 000 $ | 3,7% | 20 | ✅ |
+| 6 | [Événements Live](#6-événements-live) | 10 000 $ | à recalc | 20 | ✅ |
 | 7 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 22 | ✅ |
 | 8 | [Founder Dinners](#8-founder-dinners) | 6 000 $ | 1,4% | 3 | ✅ |
 | 9 | [Infolettre SaaSpal](#9-infolettre-saaspal) | 2 500 $ | 0,6% | 6 | ✅ |
@@ -187,7 +187,7 @@
 ---
 
 ## 6. Événements Live
-**16 000 $ (3,7%) • 4 événements • 4 000 $/événement**
+**10 000 $ (% à recalculer) • 4 événements • 2 500 $/événement**
 
 ### Forfait Host Complet (20 inclusions)
 

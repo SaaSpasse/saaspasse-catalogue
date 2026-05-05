@@ -1,9 +1,9 @@
 # Événements Live 2026
 
 ## Aperçu
-**Revenus prévus :** 16 000 $ (3,7% du total)
+**Revenus prévus :** 10 000 $ (% à recalculer)
 **Quantité :** 4 événements
-**Prix unitaire :** 4 000 $ / événement (organisation host paie 2 500 $)
+**Prix unitaire :** 2 500 $ / événement
 
 ## Description
 Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse dans leurs locaux, combinant networking, production professionnelle et visibilité de marque.
