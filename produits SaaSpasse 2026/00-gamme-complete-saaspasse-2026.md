@@ -1,7 +1,7 @@
 # Gamme Complète SaaSpasse 2026
 
 ## Vue d'Ensemble Stratégique
-**Revenus totaux prévus :** 438 000 $
+**Revenus totaux prévus :** 432 000 $
 **Nombre de produits :** 9 lignes d'affaires
 **Inclusions totales :** 150+ inclusions réparties sur tous les produits
 
