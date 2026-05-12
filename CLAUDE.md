@@ -2,7 +2,7 @@
 
 ## Fichiers du projet
 - Le fichier principal à modifier est `index.html`
-- Chemin complet : `/Users/francoislanthiernadeau/Claude Code/Catalogue SaaSpasse 2026/index.html`
+- Chemin complet : `~/claude-code/saaspasse-catalogue/index.html`
 
 ## Dépôt GitHub
 - Repo : https://github.com/SaaSpasse/saaspasse-catalogue
@@ -21,7 +21,7 @@
 
 ## Commandes rapides
 ```bash
-cd "/Users/francoislanthiernadeau/Claude Code/Catalogue SaaSpasse 2026"
+cd "$HOME/claude-code/saaspasse-catalogue"
 git add .
 git commit -m "Description du changement"
 git push origin main
