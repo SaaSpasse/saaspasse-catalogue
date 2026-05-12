@@ -17,7 +17,7 @@
 | 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 6,8% | 9 | ✅ |
 | 5 | [Employeur Premium](#5-employeur-premium) | 20 000 $ | 4,6% | 23 | ✅ |
 | 6 | [Événements Live](#6-événements-live) | 10 000 $ | à recalc | 20 | ✅ |
-| 7 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 22 | ✅ |
+| 7 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 21 | ✅ |
 | 8 | [Founder Dinners](#8-founder-dinners) | 6 000 $ | 1,4% | 3 | ✅ |
 | 9 | [Infolettre SaaSpal](#9-infolettre-saaspal) | 2 500 $ | 0,6% | 6 | ✅ |
 
@@ -253,12 +253,11 @@
 - Instagram mensuel
 - Ad-read podcast (1/4 épisodes)
 
-#### 📊 Support (5 inclusions)
+#### 📊 Support (4 inclusions)
 - Analytics libre-service
 - Job du mois préférentiel (2 000$)
 - Support personnalisé
 - Renouvellement facile
-- Prévisualisation complète
 
 ---
 

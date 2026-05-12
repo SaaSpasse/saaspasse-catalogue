@@ -52,7 +52,7 @@ Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, co
 - **Podcast :** Ad-read mensuel (5 000 écoutes/mois, 1 épisode/4)
   - Exposition audio à l'audience engagée
 
-### 📊 Outils & Support (5 inclusions)
+### 📊 Outils & Support (4 inclusions)
 - **Tableau de bord :** Analytics en libre-service (vues, clics, CTR)
   - Suivi détaillé des performances en temps réel
 - **Option "Job du mois" :** Tarif préférentiel 2 000 $ (vs 2 500 $ standard)
@@ -61,9 +61,6 @@ Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, co
   - Accompagnement expert pour optimiser les résultats
 - **Renouvellement :** Duplication/renouvellement faciles
   - Processus simplifié pour republication
-- **Prévisualisation :** Aperçu plein écran avant paiement
-  - Validation du rendu final avant engagement
-
 ---
 
 ## Métriques de Performance
@@ -73,4 +70,4 @@ Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, co
 - **Trafic Instagram :** 500 abonnés ciblés tech
 
 ## Valeur Totale
-**22 inclusions** offrant une solution complète de recrutement premium avec contenus enrichis, promotion multi-canal, analytics détaillés et support personnalisé pour maximiser le succès des campagnes de recrutement.
+**21 inclusions** offrant une solution complète de recrutement premium avec contenus enrichis, promotion multi-canal, analytics détaillés et support personnalisé pour maximiser le succès des campagnes de recrutement.
