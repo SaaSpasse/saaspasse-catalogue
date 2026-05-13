@@ -209,8 +209,8 @@
 - 20h15-21h30 : Networking + drinks
 
 #### 📊 Portée (4 inclusions)
-- >5K écoutes/mois croissance
-- >8K abonnés multi-plateforme
+- 115K+ vues YouTube cumulées
+- 8,6K+ abonnés mesurés multi-plateforme
 - 20% fondateurs, 80% professionnels
 - Contenu français
 

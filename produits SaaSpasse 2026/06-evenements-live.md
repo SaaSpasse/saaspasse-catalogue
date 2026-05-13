@@ -41,9 +41,9 @@ Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse 
   - Continuation du networking post-enregistrement
 
 ### 📊 Portée & Audience (4 inclusions)
-- **>5K écoutes/mois** (croissance continue)
-  - Garantie de portée mensuelle en expansion
-- **>8K abonnés** (LinkedIn, Spotify, YT, infolettre)
+- **115K+ vues YouTube cumulées**
+  - Audience vidéo mesurée dans le snapshot analytics
+- **8,6K+ abonnés mesurés** (LinkedIn, YouTube, Instagram, infolettre)
   - Audience qualifiée multi-plateforme
 - **Audience ciblée** : 20% fondateurs tech, 80% professionnels tech
   - Démographie alignée avec les objectifs B2B
