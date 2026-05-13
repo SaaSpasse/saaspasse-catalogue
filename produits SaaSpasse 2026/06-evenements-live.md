@@ -43,7 +43,7 @@ Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse 
 ### 📊 Portée & Audience (4 inclusions)
 - **115K+ vues YouTube cumulées**
   - Audience vidéo mesurée dans le snapshot analytics
-- **8,6K+ abonnés mesurés** (LinkedIn, YouTube, Instagram, infolettre)
+- **15,9K+ abonnés mesurés** (SaaSpasse + LinkedIn personnel Frank, YouTube, Instagram, infolettre)
   - Audience qualifiée multi-plateforme
 - **Audience ciblée** : 20% fondateurs tech, 80% professionnels tech
   - Démographie alignée avec les objectifs B2B

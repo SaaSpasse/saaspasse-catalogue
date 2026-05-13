@@ -210,7 +210,7 @@
 
 #### 📊 Portée (4 inclusions)
 - 115K+ vues YouTube cumulées
-- 8,6K+ abonnés mesurés multi-plateforme
+- 15,9K+ abonnés mesurés multi-plateforme
 - 20% fondateurs, 80% professionnels
 - Contenu français
 
