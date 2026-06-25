@@ -6,13 +6,13 @@
 **Prix unitaire :** ~375-400 $ / offre (ou 400 $/mois, 1 020 $/pack 3 mois)
 
 ## Description
-Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, contenus enrichis et promotion multi-canal pour maximiser la portée et l'efficacité du recrutement.
+Option premium pour les postes prioritaires : haut du job board, badge premium, page d'offre enrichie, mentions dans l'infolettre et post social dans le mois.
 
 ---
 
 ## Inclusions Détaillées
 
-### 💰 Tarification & Conditions (5 inclusions)
+### 💰 Tarification & Conditions (4 inclusions)
 - **Prix mensuel :** 400 $/mois
   - Facturation flexible au mois
 - **Pack 3 mois :** 1 020 $ (économie de 15%)
@@ -21,42 +21,34 @@ Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, co
   - Adaptabilité aux besoins de recrutement
 - **Paiement :** Via Stripe (taxes et facturation automatique)
   - Système de paiement sécurisé et automatisé
-- **Remboursement :** Mois non utilisés remboursés (pack 3 mois seulement)
-  - Garantie de satisfaction pour les packs longue durée
 
-### 📄 Contenu & Visibilité (8 inclusions)
+### 📄 Contenu & Visibilité (6 inclusions)
 - **Champs enrichis :** Tous les champs gratuits + médias
   - Lieu, salaire, type de poste, stack technologique, taille entreprise, département, avantages, responsabilités, compétences
-- **Vidéo "Mot du fondateur"** (<1 min)
-  - Message personnel pour humaniser l'offre
-- **Liens YouTube**
-  - Intégration de contenus vidéo additionnels
-- **Photos équipe/bureaux**
+- **Médias intégrés :** vidéo, liens YouTube, photos d'équipe ou de bureaux
   - Visuel authentique de l'environnement de travail
-- **Témoignages clients/employés**
+- **Témoignages clients, employés ou avis publics**
   - Preuve sociale et culture d'entreprise
-- **Avis employés** (ex: Glassdoor)
-  - Transparence et crédibilité
-- **Détails processus entrevue**
+- **Détails du processus d'entrevue et contexte du rôle**
   - Clarté pour améliorer l'expérience candidat
-- **Badge Premium :** Position prioritaire en haut de liste
+- **Badge premium sur l'offre**
+  - Signal clair sur la page et le job board
+- **Position prioritaire en haut de liste**
   - Visibilité maximale garantie
 
-### 📢 Promotion Multicanale (4 inclusions)
-- **Infolettre :** Mention hebdomadaire (1 000 abonnés) = 4 mentions/mois
-  - Exposition régulière à l'audience qualifiée
-- **LinkedIn :** Post mensuel + repartage Frank (4 900 abonnés)
-  - Amplification sur le réseau professionnel principal
-- **Instagram :** Post mensuel (500 abonnés)
-  - Visibilité additionnelle sur plateforme visuelle
-- **Podcast :** Ad-read mensuel (5 000 écoutes/mois, 1 épisode/4)
-  - Exposition audio à l'audience engagée
+### 📢 Promotion Multicanale (3 inclusions)
+- **Infolettre :** Mentions dans les 4 éditions de l'infolettre hebdo pendant le mois premium
+  - Exposition répétée à l'audience qualifiée
+- **Social :** 1 post social dans le mois
+  - Repartage public sans promettre un canal unique par défaut
+- **Sélections prioritaires :** Possibilité d'être inclus dans les sélections de postes prioritaires
+  - Mise en contexte additionnelle quand le calendrier éditorial s'y prête
 
 ### 📊 Outils & Support (4 inclusions)
 - **Tableau de bord :** Analytics en libre-service (vues, clics, CTR)
   - Suivi détaillé des performances en temps réel
-- **Option "Job du mois" :** Tarif préférentiel 2 000 $ (vs 2 500 $ standard)
-  - Accès privilégié à la promotion premium
+- **Upgrade d'une offre existante**
+  - Possibilité de transformer une offre standard en premium
 - **Support personnalisé :** Conseils + bouton "Besoin d'aide"
   - Accompagnement expert pour optimiser les résultats
 - **Renouvellement :** Duplication/renouvellement faciles
@@ -64,10 +56,9 @@ Offres d'emploi premium sur le job board SaaSpasse avec visibilité maximale, co
 ---
 
 ## Métriques de Performance
-- **Audience infolettre :** 1 000 abonnés qualifiés
-- **Portée LinkedIn :** 4 900 abonnés + réseau Frank
-- **Écoutes podcast :** 5 000/mois en croissance
-- **Trafic Instagram :** 500 abonnés ciblés tech
+- **Infolettre :** 4 éditions pendant le mois premium
+- **Réseaux sociaux :** 1 post social dans le mois
+- **Job board :** badge premium + position prioritaire
 
 ## Valeur Totale
-**21 inclusions** offrant une solution complète de recrutement premium avec contenus enrichis, promotion multi-canal, analytics détaillés et support personnalisé pour maximiser le succès des campagnes de recrutement.
+**17 inclusions** offrant une solution de recrutement premium avec contenus enrichis, visibilité prioritaire, mentions infolettre et support personnalisé pour pousser un poste qui compte vraiment.
