@@ -1,7 +1,7 @@
 # Communauté Privée 2026
 
 ## Aperçu
-**Revenus prévus :** 70 000 $ (16,0% du total)
+**Revenus prévus :** 70 000 $ (16,7% du total des offres actives)
 **Quantité :** 45-50 membres payants visés (après churn + nouveaux)
 **Prix unitaire :** ~1 400-1 600 $ / membre / an
 

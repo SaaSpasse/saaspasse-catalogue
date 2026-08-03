@@ -1,10 +1,12 @@
 # Employeur Premium 2026
 
 ## Aperçu
-**Revenus prévus :** 20 000 $ (4,6% du total)
+**Revenus prévus :** 20 000 $ (4,8% du total des offres actives)
 **Quantité :** 2 contrats
 **Prix unitaire :** 10 000 $ / contrat (3 mois chacun)
 **Durée totale :** 6 mois d'activité dans l'année
+**Statut 2026 :** Complet — Poka et gaiia
+**Offre 2027 :** À confirmer
 
 ## Description
 Forfait premium de 3 mois pour employeurs cherchant à maximiser leur visibilité de recrutement et leur marque employeur auprès de la communauté tech SaaSpasse.

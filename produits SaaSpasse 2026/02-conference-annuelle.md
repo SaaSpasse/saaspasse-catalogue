@@ -1,7 +1,7 @@
 # Conférence Annuelle 2026
 
 ## Aperçu
-**Revenus prévus :** 120 000 $ (27,4% du total)
+**Revenus prévus :** 120 000 $ (28,7% du total des offres actives)
 **Quantité :** 1 conférence
 **Prix unitaire :** 120 000 $ (recettes totales, légère hausse prévue)
 

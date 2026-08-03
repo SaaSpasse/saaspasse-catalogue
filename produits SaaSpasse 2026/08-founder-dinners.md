@@ -4,6 +4,7 @@
 **Revenus prévus :** 6 000 $ (1,4% du total)
 **Quantité :** 3 dinners
 **Prix unitaire :** 2 000 $ / dinner
+**Disponibilité :** 1 place de commandite restante à l'automne 2026
 
 ## Description
 Événements exclusifs de networking premium avec l'élite entrepreneuriale québécoise, offrant aux commanditaires un accès privilégié à des fondateurs générant plus d'un million de revenus annuels.
