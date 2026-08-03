@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Catalogue SaaSpasse 2026 — Opportunités de Partenariat</title>
-  <meta name="description" content="Partenariats et commandites avec l'audience tech la plus qualifiée au Québec. Podcast, événements, infolettre, communauté.">
-  <meta property="og:title" content="Catalogue SaaSpasse 2026">
-  <meta property="og:description" content="Opportunités de partenariats et commandites avec l'audience tech la plus qualifiée au Québec.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogue SaaSpasse — Fin 2026 et réservations 2027</title>
+  <meta name="description" content="Partenariats et commandites SaaSpasse pour la fin de 2026, avec ouverture progressive des réservations 2027.">
+  <meta property="og:title" content="Catalogue SaaSpasse — Fin 2026 et réservations 2027">
+  <meta property="og:description" content="Opportunités de partenariats et commandites pour rejoindre l'écosystème tech québécois.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://catalogue.saaspasse.com">
+  <meta property="og:image" content="https://catalogue.saaspasse.com/assets/saaspaladin-opt.png">
+  <meta property="og:locale" content="fr_CA">
+  <link rel="canonical" href="https://catalogue.saaspasse.com/">
   <meta name="theme-color" content="#853DFF">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23853DFF%22 stroke-width=%222%22><rect x=%222%22 y=%227%22 width=%2220%22 height=%2214%22 rx=%222%22/><path d=%22M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16%22/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +29,9 @@
       --wash-amber: #FFF8E0;
       --wash-rose: #FFF0F3;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
       margin: 0;
@@ -33,6 +39,7 @@
       color: var(--dark);
       background: var(--cream);
       position: relative;
+      touch-action: manipulation;
     }
     body::before {
       content: '';
@@ -44,11 +51,27 @@
     }
     body > * { position: relative; z-index: 1; }
     .wrap { max-width: var(--w); margin: 0 auto; }
+    h1, h2, h3, h4 { scroll-margin-top: 84px; text-wrap: balance; }
     h1, h2, h3 { margin: 0 0 12px; font-weight: 700; }
     h1 { font-size: 2.2rem; margin-bottom: 8px; }
     h2 { font-size: 1.3rem; margin-top: 24px; }
     h3 { font-size: 1rem; color: #555; font-weight: 600; }
-    p { margin: 8px 0 14px; line-height: 1.6; }
+    p { margin: 8px 0 14px; line-height: 1.6; text-wrap: pretty; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: var(--dark);
+      color: white;
+      text-decoration: none;
+      transform: translateY(-160%);
+      transition: transform 0.15s ease;
+    }
+    .skip-link:focus-visible { transform: translateY(0); }
 
     .header {
       background: linear-gradient(180deg, #faf8ff 0%, white 100%);
@@ -84,6 +107,26 @@
       font-weight: 600;
       color: var(--purple);
     }
+    .catalogue-updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 2px 0 0;
+      padding: 6px 10px;
+      border: 1px solid #ded8eb;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: #525266;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .catalogue-updated::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #247A55;
+    }
 
     .nav-tabs {
       display: flex;
@@ -101,10 +144,14 @@
       border-radius: 6px;
       padding: 8px 14px;
       background: white;
+      color: var(--dark);
       cursor: pointer;
       font-size: 0.85rem;
       font-weight: 500;
-      transition: all 0.15s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: background-color 0.15s, border-color 0.15s, color 0.15s;
     }
     .tab.active {
       background: var(--purple);
@@ -143,15 +190,15 @@
       border-radius: 50%;
       margin-left: 6px;
     }
-    .availability-high { background: #3D9970; color: #3D9970; }
-    .availability-medium { background: #FFAB00; color: #FFAB00; }
-    .availability-low { background: #E8726A; color: #E8726A; }
-    .availability-full { background: #999; color: #999; }
+    .availability-high { background: #247A55; color: #247A55; }
+    .availability-medium { background: #8A5A00; color: #8A5A00; }
+    .availability-low { background: #B8322B; color: #B8322B; }
+    .availability-full { background: #666675; color: #666675; }
 
-    .availability-text-high { color: #3D9970; font-weight: 600; }
-    .availability-text-medium { color: #FFAB00; font-weight: 600; }
-    .availability-text-low { color: #E8726A; font-weight: 600; }
-    .availability-text-full { color: #999; font-weight: 600; }
+    .availability-text-high { color: #247A55; font-weight: 600; }
+    .availability-text-medium { color: #8A5A00; font-weight: 600; }
+    .availability-text-low { color: #B8322B; font-weight: 600; }
+    .availability-text-full { color: #666675; font-weight: 600; }
 
     .product-overview {
       background: white;
@@ -172,6 +219,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--dark);
+      margin: 0;
     }
     .product-price {
       background: var(--purple);
@@ -248,7 +296,7 @@
       text-decoration: none;
       display: inline-block;
       margin: 0 8px 8px 0;
-      transition: all 0.15s;
+      transition: background-color 0.15s;
     }
     .btn-primary:hover {
       background: #7030e6;
@@ -266,11 +314,17 @@
       text-decoration: none;
       display: inline-block;
       margin: 0 8px 8px 0;
-      transition: all 0.15s;
+      transition: border-color 0.15s, color 0.15s;
     }
     .btn-secondary:hover {
       border-color: var(--purple);
       color: var(--purple);
+    }
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible,
+    .product-link:focus-visible {
+      outline: 3px solid var(--light-purple);
+      outline-offset: 3px;
     }
 
     .audience-metrics {
@@ -331,19 +385,56 @@
       color: #666;
     }
 
-    .table-row {
-      cursor: pointer;
-      transition: background 0.1s ease;
-      border-radius: 4px;
+    .catalogue-group + .catalogue-group { margin-top: 28px; }
+    .catalogue-group-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      color: var(--dark);
     }
-    .table-row span {
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .catalogue-group-title::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #247A55;
     }
-    .table-row:hover {
-      background: #f5f0ff;
+    .catalogue-group--closed .catalogue-group-title::before { background: #666675; }
+    .catalogue-table-wrap {
+      overflow-x: auto;
+      border: 1px solid #e5e1ec;
+      border-radius: 8px;
     }
-    .availability-text-open { color: #3D9970; font-weight: 600; }
+    .catalogue-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    .catalogue-table th,
+    .catalogue-table td {
+      padding: 11px 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+    }
+    .catalogue-table th {
+      background: #f0ebff;
+      font-weight: 600;
+    }
+    .catalogue-table tbody tr:last-child td { border-bottom: 0; }
+    .catalogue-table tbody tr { transition: background-color 0.1s ease; }
+    .catalogue-table tbody tr:hover { background: #f8f5ff; }
+    .product-link {
+      color: var(--purple);
+      font: inherit;
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .product-link:hover { color: #6324cf; }
+    .availability-text-open { color: #247A55; font-weight: 600; }
     .product-content { animation: fadeIn 0.2s ease; }
     .hidden { display: none; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -361,7 +452,6 @@
       height: auto;
       opacity: 1;
       transition: transform 0.3s ease;
-      cursor: pointer;
     }
     .saaspaladin:hover {
       transform: scale(1.05);
@@ -434,9 +524,59 @@
       }
       .nav-tabs::-webkit-scrollbar { display: none; }
       .tab { white-space: nowrap; flex-shrink: 0; font-size: 0.8rem; padding: 6px 12px; }
-      .table-row, [style*="grid-template-columns: 2fr"] {
-        font-size: 0.78rem;
+      .catalogue-table-wrap { border: 0; overflow: visible; }
+      .catalogue-table,
+      .catalogue-table tbody,
+      .catalogue-table tr,
+      .catalogue-table td { display: block; width: auto; }
+      .catalogue-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
+      .catalogue-table tbody {
+        display: grid;
+        gap: 10px;
+      }
+      .catalogue-table tbody tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 18px;
+        padding: 14px;
+        border: 1px solid #e5e1ec;
+        border-radius: 8px;
+        background: white;
+      }
+      .catalogue-table td {
+        padding: 0;
+        border: 0;
+        font-size: 0.82rem;
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+      .catalogue-table td:first-child {
+        grid-column: 1 / -1;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 0.95rem;
+      }
+      .catalogue-table td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 2px;
+        color: #666675;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .catalogue-table td:first-child::before { display: none; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .testimonial-card { padding: 16px; }
       .metrics-grid { grid-template-columns: 1fr 1fr; }
@@ -451,8 +591,7 @@
       .inclusion-item { font-size: 0.85rem; }
       .category-title { font-size: 0.95rem; }
       .saaspaladin-container {
-        bottom: 10px;
-        right: -20px;
+        display: none;
       }
       .saaspaladin {
         width: 100px;
@@ -472,6 +611,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
       *, *::before, *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
@@ -492,32 +632,35 @@
   </style>
 </head>
 <body>
-  <div class="saaspaladin-container">
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <div class="saaspaladin-container" aria-hidden="true">
     <div class="speech-bubble" id="saaspaladin-speech">Chevalier doit manger 🛡️</div>
-    <img src="assets/saaspaladin-opt.png" alt="SaaSpaladin" class="saaspaladin" loading="lazy" width="180" height="180">
+    <img src="assets/saaspaladin-opt.png" alt="" class="saaspaladin" loading="lazy" width="180" height="180">
   </div>
   <div class="wrap">
     <div class="header">
       <img src="assets/logo-saaspasse.png" alt="SaaSpasse" class="header-logo" width="387" height="80">
-      <h1>Catalogue 2026</h1>
-      <p class="small muted">Opportunités de partenariats et commandites avec l'audience tech la plus qualifiée au Québec.</p>
+      <h1>Catalogue SaaSpasse</h1>
+      <p class="small muted">Opportunités pour la fin de 2026, avec ouverture progressive des réservations 2027.</p>
       <div class="confidence-strip">
-        <b>15,9K+</b> abonnés cumulés<span class="sep">·</span><b>175+</b> épisodes<span class="sep">·</span><b>412</b> SaaS répertoriés<span class="sep">·</span><b>115K+</b> vues YouTube<span class="sep">·</span><b>13,8K</b> vues job board
+        <b>15,9K+</b> abonnés cumulés<span class="sep">·</span><b>185+</b> épisodes<span class="sep">·</span><b>425+</b> SaaS répertoriés<span class="sep">·</span><b>120K+</b> écoutes du podcast<span class="sep">·</span><b>1,4K+</b> abonnés infolettre
       </div>
+      <p class="catalogue-updated">Mis à jour le 2 août 2026</p>
     </div>
 
-    <div class="nav-tabs" role="tablist" aria-label="Produits SaaSpasse">
-      <div class="tab active" role="tab" tabindex="0" aria-selected="true" onclick="showProduct('overview')" onkeydown="if(event.key==='Enter')showProduct('overview')"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Vue d'ensemble</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-1')" onkeydown="if(event.key==='Enter')showProduct('product-1')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Annuels certifiés</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-2')" onkeydown="if(event.key==='Enter')showProduct('product-2')"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Conférence</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-5')" onkeydown="if(event.key==='Enter')showProduct('product-5')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Employeur</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-4')" onkeydown="if(event.key==='Enter')showProduct('product-4')"><svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Spotlight</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-3')" onkeydown="if(event.key==='Enter')showProduct('product-3')"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Communauté</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-6')" onkeydown="if(event.key==='Enter')showProduct('product-6')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Forfait host</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-8')" onkeydown="if(event.key==='Enter')showProduct('product-8')"><svg class="icon" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Dinners</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-7')" onkeydown="if(event.key==='Enter')showProduct('product-7')"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job board</div>
-      <div class="tab" role="tab" tabindex="0" onclick="showProduct('product-9')" onkeydown="if(event.key==='Enter')showProduct('product-9')"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Infolettre</div>
-    </div>
+    <main id="main-content">
+      <nav class="nav-tabs" aria-label="Produits SaaSpasse">
+        <a class="tab active" href="./" data-product="overview" aria-current="page"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Vue d'ensemble</a>
+        <a class="tab" href="?produit=employeur" data-product="product-5"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Employeur</a>
+        <a class="tab" href="?produit=founder-dinners" data-product="product-8"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>Dinners</a>
+        <a class="tab" href="?produit=job-board" data-product="product-7"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Job board</a>
+        <a class="tab" href="?produit=infolettre" data-product="product-9"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Infolettre</a>
+        <a class="tab" href="?produit=spotlight" data-product="product-4"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Spotlight</a>
+        <a class="tab" href="?produit=annuels" data-product="product-1"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Annuels certifiés</a>
+        <a class="tab" href="?produit=conference" data-product="product-2"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Conférence</a>
+        <a class="tab" href="?produit=communaute" data-product="product-3"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Communauté</a>
+        <a class="tab" href="?produit=host" data-product="product-6"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Forfait host</a>
+      </nav>
 
     <!-- Vue d'ensemble -->
     <div id="overview" class="product-content">
@@ -525,76 +668,65 @@
         <h2>Nos produits</h2>
         <p>Rejoignez l'écosystème SaaSpasse et bénéficiez d'une visibilité premium auprès de la communauté tech québécoise la plus engagée.</p>
 
-        <div style="display: grid; gap: 12px; margin-top: 20px;">
-          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; font-weight: 600; padding: 8px; background: #f0ebff; border-radius: 4px;">
-            <span>Produit</span>
-            <span>Prix</span>
-            <span>Durée</span>
-            <span>Capacité</span>
-            <span>Disponibilité</span>
+        <div class="catalogue-group">
+          <h3 class="catalogue-group-title">Disponible maintenant</h3>
+          <div class="catalogue-table-wrap">
+            <table class="catalogue-table">
+              <thead>
+                <tr><th>Produit</th><th>Prix</th><th>Durée</th><th>Capacité</th><th>Disponibilité</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=employeur" data-product="product-5">Employeur premium</a></td>
+                  <td data-label="Prix">Contactez-nous</td><td data-label="Durée">3 mois</td><td data-label="Capacité">2</td><td data-label="Disponibilité" class="availability-text-low">1 place</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=founder-dinners" data-product="product-8">Founder dinners</a></td>
+                  <td data-label="Prix">2 000 $</td><td data-label="Durée">1 soirée</td><td data-label="Capacité">3</td><td data-label="Disponibilité" class="availability-text-medium">2 places</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=job-board" data-product="product-7">Job board premium</a></td>
+                  <td data-label="Prix">400 $/mois</td><td data-label="Durée">1 ou 3 mois</td><td data-label="Capacité">Self-serve</td><td data-label="Disponibilité" class="availability-text-open">Ouvert</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=infolettre" data-product="product-9">Infolettre SaaSpal</a></td>
+                  <td data-label="Prix">65 $/an</td><td data-label="Durée">12 mois</td><td data-label="Capacité">Illimitée</td><td data-label="Disponibilité" class="availability-text-open">Ouvert</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-1')">
-            <span style="color: #853DFF; font-weight: 500;">Partenaires annuels certifiés</span>
-            <span>Contactez-nous</span>
-            <span>12 mois</span>
-            <span>5</span>
-            <span class="availability-text-full">0</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-2')">
-            <span style="color: #853DFF; font-weight: 500;">Commandites conférence annuelle</span>
-            <span>3 500-16 000 $</span>
-            <span>3 mois</span>
-            <span>8</span>
-            <span class="availability-text-full">0</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-5')">
-            <span style="color: #853DFF; font-weight: 500;">Employeur premium</span>
-            <span>Contactez-nous</span>
-            <span>3 mois</span>
-            <span>2</span>
-            <span class="availability-text-low">1</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-4')">
-            <span style="color: #853DFF; font-weight: 500;">Partenaires spotlight</span>
-            <span>3 500 $</span>
-            <span>1 mois</span>
-            <span>10</span>
-            <span class="availability-text-low">1</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-3')">
-            <span style="color: #853DFF; font-weight: 500;">Communauté privée</span>
-            <span>Contactez-nous</span>
-            <span>12 mois</span>
-            <span>Sur invitation</span>
-            <span class="availability-text-full">Capacité atteinte</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-6')">
-            <span style="color: #853DFF; font-weight: 500;">Forfait host</span>
-            <span>2 500 $</span>
-            <span>1 soirée</span>
-            <span>4</span>
-            <span class="availability-text-full">0</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-8')">
-            <span style="color: #853DFF; font-weight: 500;">Founder dinners</span>
-            <span>2 000 $</span>
-            <span>1 soirée</span>
-            <span>3</span>
-            <span class="availability-text-medium">2</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px; border-bottom: 1px solid #eee;" onclick="showProduct('product-7')">
-            <span style="color: #853DFF; font-weight: 500;">Job board premium</span>
-            <span>400 $/mois</span>
-            <span>1 ou 3 mois</span>
-            <span>Self-serve</span>
-            <span class="availability-text-open">Ouvert</span>
-          </div>
-          <div class="table-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 12px; padding: 8px;" onclick="showProduct('product-9')">
-            <span style="color: #853DFF; font-weight: 500;">Infolettre SaaSpal</span>
-            <span>65 $</span>
-            <span>12 mois</span>
-            <span>Illimité</span>
-            <span class="availability-text-open">Ouvert</span>
+        </div>
+
+        <div class="catalogue-group catalogue-group--closed">
+          <h3 class="catalogue-group-title">Complet en 2026 ou sur liste d'attente</h3>
+          <div class="catalogue-table-wrap">
+            <table class="catalogue-table">
+              <thead>
+                <tr><th>Produit</th><th>Prix</th><th>Durée</th><th>Capacité 2026</th><th>Prochaine étape</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=spotlight" data-product="product-4">Partenaires spotlight</a></td>
+                  <td data-label="Prix">3 500 $</td><td data-label="Durée">1 mois</td><td data-label="Capacité 2026">10/10</td><td data-label="Prochaine étape" class="availability-text-full">Intérêt 2027</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=annuels" data-product="product-1">Partenaires annuels certifiés</a></td>
+                  <td data-label="Prix">Contactez-nous</td><td data-label="Durée">12 mois</td><td data-label="Capacité 2026">5/5</td><td data-label="Prochaine étape" class="availability-text-full">2027 à confirmer</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=conference" data-product="product-2">Commandites conférence annuelle</a></td>
+                  <td data-label="Prix">3 500–16 000 $</td><td data-label="Durée">10 sept. 2026</td><td data-label="Capacité 2026">8/8</td><td data-label="Prochaine étape" class="availability-text-full">Intérêt 2027</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=communaute" data-product="product-3">Communauté privée</a></td>
+                  <td data-label="Prix">Contactez-nous</td><td data-label="Durée">12 mois</td><td data-label="Capacité 2026">Sur invitation</td><td data-label="Prochaine étape" class="availability-text-full">Liste d'attente</td>
+                </tr>
+                <tr>
+                  <td data-label="Produit"><a class="product-link" href="?produit=host" data-product="product-6">Forfait host</a></td>
+                  <td data-label="Prix">2 500 $</td><td data-label="Durée">1 soirée</td><td data-label="Capacité actuelle">4/4</td><td data-label="Prochaine étape" class="availability-text-full">Dates futures</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -623,7 +755,7 @@
           <h3>Intéressé?</h3>
           <p class="small">Contactez-nous pour jaser des opportunités qui correspondent à vos objectifs.</p>
           <a href="mailto:bonjourhi@saaspasse.com" class="btn-primary">Nous contacter</a>
-          <a href="https://gamma.app/docs/Media-kit-SaaSpasse-7d6pyz3752fzxrz" target="_blank" class="btn-secondary">Voir Media kit</a>
+          <a href="https://gamma.app/docs/Media-kit-SaaSpasse-7d6pyz3752fzxrz" target="_blank" rel="noopener noreferrer" class="btn-secondary">Voir Media kit</a>
         </div>
       </div>
     </div>
@@ -632,13 +764,13 @@
     <div id="product-1" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Partenaires annuels certifiés</div>
-          <div class="product-price">Contactez-nous</div>
+          <h2 class="product-title">Partenaires annuels certifiés</h2>
+          <div class="product-price">Complet en 2026</div>
         </div>
-        <p>Le forfait premium de partenariat annuel offrant une visibilité maximale et des avantages exclusifs sur tous les canaux SaaSpasse pendant une année complète.</p>
+        <p>Le forfait premium de partenariat annuel offrant une visibilité maximale et des avantages exclusifs sur tous les canaux SaaSpasse pendant une année complète. Les 5 places 2026 sont attribuées; la formule 2027 reste à confirmer.</p>
 
         <div class="product-meta">
-          <div class="meta-item"><b class="availability-text-full">0 / 5</b><span>places disponibles</span></div>
+          <div class="meta-item"><b class="availability-text-full">5 / 5</b><span>partenaires 2026</span></div>
           <div class="meta-item"><b>12 mois</b><span>durée</span></div>
           <div class="meta-item"><b>16</b><span>inclusions</span></div>
           <div class="meta-item"><b>Exclusif</b><span>programme premium</span></div>
@@ -648,19 +780,19 @@
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.lechiffre.ca/fr/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Le Chiffre</a>
+              <a href="https://www.lechiffre.ca/fr/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Le Chiffre</a>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://finaltacapital.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Finalta</a>
+              <a href="https://finaltacapital.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Finalta</a>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://baseline.quebec/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Baseline</a>
+              <a href="https://baseline.quebec/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Baseline</a>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.unicorne.cloud/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Unicorne</a>
+              <a href="https://www.unicorne.cloud/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Unicorne</a>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.leviatlegal.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Leviat Legal</a>
+              <a href="https://www.leviatlegal.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Leviat Legal</a>
             </div>
           </div>
         </div>
@@ -703,7 +835,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Accès exclusif & networking</div>
+            <div class="category-title">Accès exclusif &amp; networking</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Session live avec la communauté privée (1×/an)</div>
               <div class="inclusion-item">Accès privilégié à communauté en ligne privée fondateurs</div>
@@ -717,7 +849,7 @@
         <div class="cta-section">
           <h3>Partenaires annuels certifiés</h3>
           <p class="small">Rejoignez le partenariat le plus premium SaaSpasse avec une visibilité maximale.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Partenaires annuels certifiés" class="btn-primary">Nous contacter</a>
+          <a href="mailto:bonjourhi@saaspasse.com?subject=Intérêt partenaires annuels 2027" class="btn-primary">Manifester mon intérêt pour 2027</a>
         </div>
       </div>
     </div>
@@ -726,16 +858,16 @@
     <div id="product-2" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Commandites conférence annuelle</div>
+          <h2 class="product-title">Commandites conférence annuelle</h2>
           <div class="product-price">Prix variables</div>
         </div>
         <p>Forfaits de commandite pour la conférence annuelle SaaSpasse, offrant différents niveaux de visibilité et d'engagement avec la communauté tech québécoise.</p>
 
         <div class="product-meta">
-          <div class="meta-item"><b class="availability-text-full">0 / 8</b><span>commandites disponibles</span></div>
-          <div class="meta-item"><b>3 mois</b><span>durée</span></div>
+          <div class="meta-item"><b class="availability-text-full">8 / 8</b><span>commandites 2026</span></div>
+          <div class="meta-item"><b>10 sept. 2026</b><span>date de la conférence</span></div>
           <div class="meta-item"><b>34</b><span>inclusions total</span></div>
-          <div class="meta-item"><b>3.5-16K $</b><span>prix selon forfait</span></div>
+          <div class="meta-item"><b>3 500–16 000 $</b><span>prix selon forfait</span></div>
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
@@ -744,29 +876,29 @@
             <div>
               <div style="font-weight: 600; margin-bottom: 6px;">Au fond Léon (3/3 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <a href="https://workleap.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Workleap</a>
-                <a href="https://capitalenumerique.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Capitale numérique</a>
-                <a href="https://aqccapital.ca/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">AQC Capital</a>
+                <a href="https://workleap.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Workleap</a>
+                <a href="https://devolutions.net/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Devolutions</a>
+                <a href="https://aqccapital.ca/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">AQC Capital</a>
               </div>
             </div>
             <div>
               <div style="font-weight: 600; margin-bottom: 6px;">P'tit train va loin (3/3 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <a href="https://missiveapp.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Missive</a>
-                <a href="https://deck.co/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Deck</a>
-                <a href="https://tdip.td.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">TDIP</a>
+                <a href="https://missiveapp.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Missive</a>
+                <a href="https://deck.co/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Deck</a>
+                <a href="https://tdip.td.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">TDIP</a>
               </div>
             </div>
             <div>
-              <div style="font-weight: 600; margin-bottom: 6px;">Pré-Conf Founder Dinner (1/1 - complet)</div>
+              <div style="font-weight: 600; margin-bottom: 6px;">Crêpes &amp; Capital — Founder dinner (1/1 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <a href="https://finaltacapital.com/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Finalta</a>
+                <a href="https://finaltacapital.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Finalta</a>
               </div>
             </div>
             <div>
               <div style="font-weight: 600; margin-bottom: 6px;">Cette soirée-là (1/1 - complet)</div>
               <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <a href="https://yack.one/?ref=saaspasse.com" target="_blank" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Yack</a>
+                <a href="https://yack.one/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="padding: 4px 10px; background: white; border-radius: 4px; border: 1px solid #e0e0e0; color: #853DFF; text-decoration: none; font-weight: 500;">Yack</a>
               </div>
             </div>
           </div>
@@ -805,7 +937,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Pré-Conf Founder Dinner</div>
+            <div class="category-title">Crêpes &amp; Capital — Founder dinner</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Réseautage 20 fondateurs communauté</div>
               <div class="inclusion-item">Vidéo diffusée Slack privé</div>
@@ -832,8 +964,8 @@
         <div class="cta-section">
           <h3>Commandites conférence annuelle</h3>
           <p class="small">Rejoignez la plus grande conférence tech québécoise avec nos forfaits de commandite.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Conférence annuelle" class="btn-primary">Nous contacter</a>
-          <a href="https://gamma.app/docs/SaaSpasse-Conf-26-arrhdl0ah6f7qbs" target="_blank" class="btn-secondary">Plus de détails</a>
+          <a href="mailto:bonjourhi@saaspasse.com?subject=Intérêt commandite conférence 2027" class="btn-primary">Manifester mon intérêt pour 2027</a>
+          <a href="https://conf.saaspasse.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Voir la conférence 2026</a>
         </div>
       </div>
     </div>
@@ -842,7 +974,7 @@
     <div id="product-3" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Communauté privée</div>
+          <h2 class="product-title">Communauté privée</h2>
           <div class="product-price">Contactez-nous</div>
         </div>
         <p>Communauté exclusive de fondateurs et joueurs clés SaaS offrant networking, formation et avantages exclusifs pour accélérer la croissance des entreprises technologiques. Accès sur invitation seulement.</p>
@@ -856,13 +988,13 @@
 
         <div style="margin-top: 16px; padding: 12px; background: var(--wash-amber); border-radius: 6px; border-left: none;">
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: var(--dark);">• Liste d'attente</h3>
-          <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--dark);">La communauté a atteint sa capacité maximale. <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: underline; font-weight: 600;">Rejoignez la liste d'attente</a> pour être informé des prochaines ouvertures.</p>
         </div>
 
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">Communauté & networking</div>
+            <div class="category-title">Communauté &amp; networking</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Accès aux canaux Slack de discussion thématiques</div>
               <div class="inclusion-item">Messagerie directe illimitée avec tous les membres</div>
@@ -871,7 +1003,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Événements & formation</div>
+            <div class="category-title">Événements &amp; formation</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Invitations aux founders meetups privés en personne (4 en '25)</div>
               <div class="inclusion-item">Sessions hebdomadaires de office hours avec la communauté</div>
@@ -895,7 +1027,7 @@
         <div class="cta-section">
           <h3>Communauté privée</h3>
           <p class="small">Rejoignez une communauté exclusive de founders à haut potentiel.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Communauté privée" class="btn-primary">Nous contacter</a>
+          <a href="https://saaspasse.notion.site/22f5c10632bb80a891c2c16fa5ad029a?pvs=105" target="_blank" rel="noopener noreferrer" class="btn-primary">Rejoindre la liste d'attente</a>
         </div>
       </div>
     </div>
@@ -903,13 +1035,13 @@
     <div id="product-4" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Partenaires spotlight</div>
+          <h2 class="product-title">Partenaires spotlight</h2>
           <div class="product-price">3 500 $ / mois</div>
         </div>
-        <p>Forfait mensuel de commandite permettant d'annoncer un produit ou service utile pour les SaaS. Opportunité de devenir l'un des premiers annonceurs à un tarif préférentiel.</p>
+        <p>Forfait mensuel de commandite permettant d'annoncer un produit ou service utile pour les SaaS. Le calendrier 2026 est complet; les marques intéressées peuvent déjà se manifester pour 2027.</p>
 
         <div class="product-meta">
-          <div class="meta-item"><b class="availability-text-low">1 / 10</b><span>spots disponibles</span></div>
+          <div class="meta-item"><b class="availability-text-full">10 / 10</b><span>spots 2026 réservés</span></div>
           <div class="meta-item"><b>1 mois</b><span>durée</span></div>
           <div class="meta-item"><b>9</b><span>inclusions</span></div>
           <div class="meta-item"><b>14 unités</b><span>bande passante</span></div>
@@ -926,34 +1058,34 @@
         </div>
 
         <div style="margin-top: 16px; padding: 12px; background: var(--wash-blue); border-radius: 6px; border-left: none;">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires 2026 annoncés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.fairpointinc.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Fairpoint Assurance</a>
+              <a href="https://www.fairpointinc.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Fairpoint Assurance</a>
               <span style="color: #666;"> — Janvier 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
+              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
               <span style="color: #666;"> — Février 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://caissetech.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Caisse des technologies Desjardins</a>
+              <a href="https://caissetech.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Caisse des technologies Desjardins</a>
               <span style="color: #666;"> — Mars 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.deck.co/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Deck</a>
+              <a href="https://www.deck.co/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Deck</a>
               <span style="color: #666;"> — Avril 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
+              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
               <span style="color: #666;"> — Mai 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.mirego.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Mirego</a>
+              <a href="https://www.mirego.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Mirego</a>
               <span style="color: #666;"> — Octobre 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
+              <a href="https://yack.one/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Yack</a>
               <span style="color: #666;"> — Novembre 2026</span>
             </div>
           </div>
@@ -1004,8 +1136,8 @@
         <div class="cta-section">
           <h3>Partenaires spotlight</h3>
           <p class="small">Exposition maximale pendant un mois complet sur tous les canaux SaaSpasse.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Partenaires spotlight" class="btn-primary">Nous contacter</a>
-          <a href="https://gamma.app/docs/7d6pyz3752fzxrz#card-h6sdckj7qq9j6j7" target="_blank" class="btn-secondary">Plus de détails</a>
+          <a href="mailto:bonjourhi@saaspasse.com?subject=Intérêt Spotlight 2027" class="btn-primary">Manifester mon intérêt pour 2027</a>
+          <a href="https://gamma.app/docs/7d6pyz3752fzxrz#card-h6sdckj7qq9j6j7" target="_blank" rel="noopener noreferrer" class="btn-secondary">Plus de détails</a>
         </div>
       </div>
     </div>
@@ -1013,7 +1145,7 @@
     <div id="product-5" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Employeur premium</div>
+          <h2 class="product-title">Employeur premium</h2>
           <div class="product-price">Contactez-nous</div>
         </div>
         <p>Forfait premium de 3 mois pour employeurs cherchant à maximiser leur visibilité de recrutement et leur marque employeur auprès de la communauté tech SaaSpasse.</p>
@@ -1029,7 +1161,7 @@
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.poka.io/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Poka</a>
+              <a href="https://www.poka.io/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Poka</a>
               <span style="color: #666;"> — mars-avril-mai 2026</span>
             </div>
           </div>
@@ -1089,7 +1221,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Analytics & support premium</div>
+            <div class="category-title">Analytics &amp; support premium</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Tableau de bord live (vues page, CTR, vues offres, impressions réseaux, OR infolettre, écoutes podcast)</div>
               <div class="inclusion-item">Rapport interactif de fin de contrat</div>
@@ -1117,7 +1249,7 @@
     <div id="product-6" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Forfait host</div>
+          <h2 class="product-title">Forfait host</h2>
           <div class="product-price">2 500 $ / événement</div>
         </div>
         <p>Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse dans leurs locaux, combinant networking, production professionnelle et visibilité de marque.</p>
@@ -1130,11 +1262,11 @@
         </div>
 
         <div class="audience-metrics">
-          <h3 style="margin: 0 0 8px 0; font-size: 1rem;">Portée & Audience</h3>
+          <h3 style="margin: 0 0 8px 0; font-size: 1rem;">Portée &amp; Audience</h3>
           <div class="metrics-grid">
-            <div class="metric-item"><b>115K+</b><span>vues YouTube</span></div>
+            <div class="metric-item"><b>120K+</b><span>écoutes du podcast</span></div>
             <div class="metric-item"><b>15,9K+</b><span>abonnés mesurés</span></div>
-            <div class="metric-item"><b>175+</b><span>épisodes</span></div>
+            <div class="metric-item"><b>185+</b><span>épisodes</span></div>
             <div class="metric-item"><b>20+</b><span>événements</span></div>
           </div>
         </div>
@@ -1143,19 +1275,19 @@
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.nexapp.ca/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Nexapp</a>
+              <a href="https://www.nexapp.ca/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Nexapp</a>
               <span style="color: #666;"> — Janvier 2026</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.poka.io/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Poka</a>
+              <a href="https://www.poka.io/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Poka</a>
               <span style="color: #666;"> — TBD</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.mirego.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Mirego</a>
+              <a href="https://www.mirego.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Mirego</a>
               <span style="color: #666;"> — Janvier 2027</span>
             </div>
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://amiralventures.com/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">Amiral Ventures</a>
+              <a href="https://amiralventures.com/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">Amiral Ventures</a>
               <span style="color: #666;"> — Novembre 2026</span>
             </div>
           </div>
@@ -1163,7 +1295,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">Logistique & production</div>
+            <div class="category-title">Logistique &amp; production</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Gestion complète de l'audience : 75-150 personnes</div>
               <div class="inclusion-item">Gestion billetterie : SaaSpasse s'occupe de la vente de billets</div>
@@ -1172,7 +1304,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Contenu & distribution</div>
+            <div class="category-title">Contenu &amp; distribution</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Publication podcast : Diffusion sur le feed SaaSpasse</div>
               <div class="inclusion-item">Publication YouTube : Mise en ligne sur la chaîne</div>
@@ -1183,13 +1315,13 @@
           <div class="inclusion-category">
             <div class="category-title">Format d'événement</div>
             <div class="inclusion-list">
-              <div class="inclusion-item">18:00-19:00 : Networking + bouffe & drinks</div>
+              <div class="inclusion-item">18:00-19:00 : Networking + bouffe &amp; drinks</div>
               <div class="inclusion-item">19:00-20:15 : Podcast live devant audience</div>
               <div class="inclusion-item">20:15-21:30 : Networking + drinks</div>
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Processus & timeline</div>
+            <div class="category-title">Processus &amp; timeline</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Promotion : Débute ~1 mois avant l'événement</div>
               <div class="inclusion-item">Questions : Envoyées ~7 jours d'avance</div>
@@ -1200,7 +1332,7 @@
             <div class="category-title">Modèle économique</div>
             <div class="inclusion-list">
               <div class="inclusion-item">SaaSpasse gère : Production, captation, montage, billetterie, promotion</div>
-              <div class="inclusion-item">Organisation Host fournit : Venue + bouffe & drinks (budget 2 500 $)</div>
+              <div class="inclusion-item">Organisation Host fournit : Venue + bouffe &amp; drinks (budget 2 500 $)</div>
             </div>
           </div>
           <div class="inclusion-category">
@@ -1209,7 +1341,7 @@
               <div class="inclusion-item">Ep.139 - Jimmy Plante (live @Folks)</div>
               <div class="inclusion-item">Ep.125 - Serge Beauchemin (live @Espace CDPQ)</div>
               <div class="inclusion-item">Ep.106 - Sheila Morin (live @Coveo)</div>
-              <div class="inclusion-item"><a href="https://www.saaspasse.com/episode/episode-48-live-guillaume-roy-le-futur-de-workleap" target="_blank" style="color: #853DFF;">Ep.48 - Guillaume Roy (live @Workleap)</a></div>
+              <div class="inclusion-item"><a href="https://www.saaspasse.com/episode/episode-48-live-guillaume-roy-le-futur-de-workleap" target="_blank" rel="noopener noreferrer" style="color: #853DFF;">Ep.48 - Guillaume Roy (live @Workleap)</a></div>
             </div>
           </div>
         </div>
@@ -1217,7 +1349,7 @@
         <div class="cta-section">
           <h3>Forfait host</h3>
           <p class="small">Solution complète d'événementiel avec production professionnelle et networking de qualité.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Événements live" class="btn-primary">Nous contacter</a>
+          <a href="mailto:bonjourhi@saaspasse.com?subject=Dates futures — forfait host" class="btn-primary">Demander une date future</a>
         </div>
       </div>
     </div>
@@ -1225,7 +1357,7 @@
     <div id="product-7" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Job board premium</div>
+          <h2 class="product-title">Job board premium</h2>
           <div class="product-price">400 $ / mois</div>
         </div>
         <p>Option premium pour les postes prioritaires : haut du job board, badge premium, page d'offre enrichie, mentions dans l'infolettre et post social dans le mois.</p>
@@ -1245,7 +1377,7 @@
 
         <div class="inclusions">
           <div class="inclusion-category">
-            <div class="category-title">Tarification & conditions</div>
+            <div class="category-title">Tarification &amp; conditions</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Prix mensuel : 400 $/mois</div>
               <div class="inclusion-item">Pack 3 mois : 1 020 $ (économie de 15%)</div>
@@ -1254,7 +1386,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Contenu & visibilité</div>
+            <div class="category-title">Contenu &amp; visibilité</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Champs enrichis : Tous les champs gratuits + médias</div>
               <div class="inclusion-item">Médias intégrés : vidéo, liens YouTube, photos d'équipe ou de bureaux</div>
@@ -1273,7 +1405,7 @@
             </div>
           </div>
           <div class="inclusion-category">
-            <div class="category-title">Outils & support</div>
+            <div class="category-title">Outils &amp; support</div>
             <div class="inclusion-list">
               <div class="inclusion-item">Upgrade possible d'une offre standard existante</div>
               <div class="inclusion-item">Statistiques de performance disponibles dans le dashboard</div>
@@ -1295,7 +1427,7 @@
     <div id="product-8" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Founder dinners</div>
+          <h2 class="product-title">Founder dinners</h2>
           <div class="product-price">2 000 $ / dinner</div>
         </div>
         <p>Événements exclusifs de networking et de fun autour d'une bonne bouffe. Offre aux commanditaires un accès privilégié à des fondateurs de qualité le temps d'une soirée.</p>
@@ -1321,7 +1453,7 @@
           <h3 style="margin: 0 0 8px 0; font-size: 1rem; color: #333;">• Partenaires confirmés</h3>
           <div style="display: grid; gap: 8px; font-size: 0.9rem;">
             <div style="padding: 8px; background: white; border-radius: 4px; border: 1px solid #e0e0e0;">
-              <a href="https://www.bflcanada.ca/?ref=saaspasse.com" target="_blank" style="color: #853DFF; text-decoration: none; font-weight: 600;">BFL</a>
+              <a href="https://www.bflcanada.ca/?ref=saaspasse.com" target="_blank" rel="noopener noreferrer" style="color: #853DFF; text-decoration: none; font-weight: 600;">BFL</a>
             </div>
           </div>
         </div>
@@ -1330,7 +1462,7 @@
           <div class="inclusion-category">
             <div class="category-title">Événement exclusif</div>
             <div class="inclusion-list">
-              <div class="inclusion-item">1 souper avec 15-30 fondateurs générant >1M$ de revenus annuels - Accès priviligié à des entrepreneurs accomplis</div>
+              <div class="inclusion-item">1 souper avec 15–30 fondateurs générant plus de 1 M$ de revenus annuels — accès privilégié à des entrepreneurs accomplis</div>
               <div class="inclusion-item">Pitch dédié de 5-10 minutes au milieu du souper - Opportunité de présentation directe à une audience qualifiée</div>
               <div class="inclusion-item">Networking exclusif avec des entrepreneurs d'expérience - Échanges informels avec des décideurs influents</div>
             </div>
@@ -1350,8 +1482,7 @@
         <div class="cta-section">
           <h3>Founder dinners</h3>
           <p class="small">Accès exclusif à des entrepreneurs d'expérience dans un format intime et convivial.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Founder dinners" class="btn-primary">Nous contacter</a>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Founder dinners" class="btn-secondary">Plus de détails</a>
+          <a href="mailto:bonjourhi@saaspasse.com?subject=Founder dinner" class="btn-primary">Discuter d'un souper</a>
         </div>
       </div>
     </div>
@@ -1359,7 +1490,7 @@
     <div id="product-9" class="product-content hidden">
       <div class="product-overview">
         <div class="product-header">
-          <div class="product-title">Infolettre SaaSpal</div>
+          <h2 class="product-title">Infolettre SaaSpal</h2>
           <div class="product-price">65 $</div>
         </div>
         <p>Infolettre premium hebdomadaire offrant contenu exclusif, accès privilégié aux événements et interaction directe avec l'écosystème SaaSpasse pour les professionnels tech les plus engagés.</p>
@@ -1408,12 +1539,13 @@
         <div class="cta-section">
           <h3>Infolettre SaaSpal</h3>
           <p class="small">Contenu premium hebdomadaire avec rabais exclusifs sur les événements et interaction directe avec le podcast.</p>
-          <a href="mailto:bonjourhi@saaspasse.com?subject=Infolettre SaaSpal" class="btn-primary">Nous contacter</a>
-          <a href="https://saaspasse.beehiiv.com/upgrade" target="_blank" class="btn-secondary">Plus de détails</a>
+          <a href="https://infolettre.saaspasse.com/upgrade" target="_blank" rel="noopener noreferrer" class="btn-primary">S'abonner à SaaSpal</a>
+          <a href="https://infolettre.saaspasse.com/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Voir l'infolettre</a>
         </div>
       </div>
     </div>
 
+    </main>
   </div>
 
   <script>
@@ -1436,44 +1568,67 @@
       });
     }
 
-    function showProduct(productId) {
-      // Cacher tous les contenus
+    const productSlugs = {
+      'product-1': 'annuels',
+      'product-2': 'conference',
+      'product-3': 'communaute',
+      'product-4': 'spotlight',
+      'product-5': 'employeur',
+      'product-6': 'host',
+      'product-7': 'job-board',
+      'product-8': 'founder-dinners',
+      'product-9': 'infolettre'
+    };
+
+    const slugProducts = Object.fromEntries(
+      Object.entries(productSlugs).map(([productId, slug]) => [slug, productId])
+    );
+
+    function showProduct(productId, { updateHistory = false, scroll = false } = {}) {
+      if (!document.getElementById(productId)) productId = 'overview';
+
       document.querySelectorAll('.product-content').forEach(content => {
-        content.classList.add('hidden');
+        const isActive = content.id === productId;
+        content.classList.toggle('hidden', !isActive);
+        content.setAttribute('aria-hidden', String(!isActive));
       });
 
-      // Retirer la classe active de tous les onglets
       document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
+        const isActive = tab.dataset.product === productId;
+        tab.classList.toggle('active', isActive);
+        if (isActive) tab.setAttribute('aria-current', 'page');
+        else tab.removeAttribute('aria-current');
       });
 
-      // Afficher le contenu sélectionné
-      document.getElementById(productId).classList.remove('hidden');
-
-      // Scroll to top of content on mobile
-      if (window.innerWidth <= 768) {
-        document.querySelector('.nav-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (updateHistory) {
+        const url = new URL(window.location.href);
+        const slug = productSlugs[productId];
+        if (slug) url.searchParams.set('produit', slug);
+        else url.searchParams.delete('produit');
+        window.history.pushState({ productId }, '', url);
       }
 
-      // Activer l'onglet correspondant basé sur le productId
-      const tabMapping = {
-        'overview': 0,
-        'product-1': 1,
-        'product-2': 2,
-        'product-5': 3,
-        'product-4': 4,
-        'product-3': 5,
-        'product-6': 6,
-        'product-8': 7,
-        'product-7': 8,
-        'product-9': 9
-      };
-
-      const tabIndex = tabMapping[productId];
-      if (tabIndex !== undefined) {
-        document.querySelectorAll('.tab')[tabIndex].classList.add('active');
+      if (scroll && window.innerWidth <= 768) {
+        const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        document.querySelector('.nav-tabs').scrollIntoView({ behavior, block: 'start' });
       }
     }
+
+    document.querySelectorAll('[data-product]').forEach(link => {
+      link.addEventListener('click', event => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        showProduct(link.dataset.product, { updateHistory: true, scroll: true });
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      const slug = new URLSearchParams(window.location.search).get('produit');
+      showProduct(slugProducts[slug] || 'overview');
+    });
+
+    const initialSlug = new URLSearchParams(window.location.search).get('produit');
+    showProduct(slugProducts[initialSlug] || 'overview');
   </script>
 </body>
 </html>

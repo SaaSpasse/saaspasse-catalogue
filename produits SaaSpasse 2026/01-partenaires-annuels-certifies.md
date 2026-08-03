@@ -1,10 +1,11 @@
 # Partenaires Annuels Certifiés 2026
 
 ## Aperçu
-**Revenus prévus :** 160 000 $ (36,5% du total)
-**Quantité :** 4 partenaires
-**Prix unitaire :** 40 000 $ / partenaire / an
+**Revenus prévus :** 160 000 $ (37,0% du total)
+**Quantité :** 5 partenaires certifiés en 2026 (capacité atteinte)
+**Tarification 2026 :** Non affichée publiquement
 **Plafond maximum :** 5 partenaires annuels certifiés
+**Offre 2027 :** Format, capacité et tarification à confirmer
 
 ## Description
 Le forfait premium de partenariat annuel offrant une visibilité maximale et des avantages exclusifs sur tous les canaux SaaSpasse pendant une année complète.
@@ -78,7 +79,7 @@ Le forfait premium de partenariat annuel offrant une visibilité maximale et des
 
 ## Justifications Stratégiques
 - **Plafond :** Maximum 5 partenaires annuels certifiés
-- **Bande passante :** Les partenaires certifiés occupent 50% de la bande passante promo
+- **Bande passante :** À recalculer avec les 5 partenaires certifiés 2026
 - **Avantages exclusifs :**
   - Communauté value++ : Accès réservé (Slack, meetups, sessions virtuelles)
   - Conférence value++ : Intégration organique dans la programmation

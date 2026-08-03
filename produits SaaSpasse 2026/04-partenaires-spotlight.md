@@ -2,11 +2,12 @@
 
 ## Aperçu
 **Revenus prévus :** 30 000 $ (6,8% du total)
-**Quantité :** 9 mois vendus
-**Prix unitaire :** ~3 300-3 500 $ / mois (dont 3 mois déjà ciblés)
+**Quantité :** 10 spots sur 10 réservés en 2026
+**Prix affiché :** 3 500 $ / mois
+**Offre 2027 :** Intérêt accepté, calendrier à confirmer
 
 ## Description
-Forfait mensuel de commandite permettant d'annoncer un produit ou service utile pour les SaaS. Opportunité de devenir l'un des premiers annonceurs à un tarif préférentiel, en tirant parti de la croissance de SaaSpasse.
+Forfait mensuel de commandite permettant d'annoncer un produit ou service utile pour les SaaS. Le calendrier 2026 est complet; les marques intéressées peuvent déjà se manifester pour 2027.
 
 ---
 

@@ -3,7 +3,9 @@
 ## Vue d'Ensemble Stratégique
 **Revenus totaux prévus :** 432 000 $
 **Nombre de produits :** 9 lignes d'affaires
-**Inclusions totales :** 150+ inclusions réparties sur tous les produits
+**Inclusions totales :** 143 inclusions affichées dans le catalogue public
+
+> Mise à jour du 2 août 2026 : 5 partenaires annuels certifiés en 2026 et calendrier Spotlight 2026 complet. Les formats et capacités 2027 restent à confirmer.
 
 ---
 
@@ -11,20 +13,22 @@
 
 | # | Produit | Revenus | % Total | Inclusions | Statut |
 |---|---------|---------|---------|------------|--------|
-| 1 | [Partenaires Annuels Certifiés](#1-partenaires-annuels-certifiés) | 160 000 $ | 36,5% | 16 | ✅ |
-| 2 | [Conférence Annuelle](#2-conférence-annuelle) | 120 000 $ | 27,4% | 34 | ✅ |
-| 3 | [Communauté Privée](#3-communauté-privée) | 70 000 $ | 16,0% | 15 | ✅ |
-| 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 6,8% | 9 | ✅ |
+| 1 | [Partenaires Annuels Certifiés](#1-partenaires-annuels-certifiés) | 160 000 $ | 37,0% | 16 | ✅ |
+| 2 | [Conférence Annuelle](#2-conférence-annuelle) | 120 000 $ | 27,8% | 34 | ✅ |
+| 3 | [Communauté Privée](#3-communauté-privée) | 70 000 $ | 16,2% | 15 | ✅ |
+| 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 6,9% | 9 | ✅ |
 | 5 | [Employeur Premium](#5-employeur-premium) | 20 000 $ | 4,6% | 23 | ✅ |
-| 6 | [Événements Live](#6-événements-live) | 10 000 $ | à recalc | 20 | ✅ |
-| 7 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 21 | ✅ |
+| 6 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 17 | ✅ |
+| 7 | [Événements Live](#6-événements-live) | 10 000 $ | 2,3% | 20 | ✅ |
 | 8 | [Founder Dinners](#8-founder-dinners) | 6 000 $ | 1,4% | 3 | ✅ |
 | 9 | [Infolettre SaaSpal](#9-infolettre-saaspal) | 2 500 $ | 0,6% | 6 | ✅ |
 
 ---
 
 ## 1. Partenaires Annuels Certifiés
-**160 000 $ (36,5%) • 4 partenaires • 40 000 $/partenaire**
+**160 000 $ (37,0%) • 5 partenaires certifiés en 2026 • capacité atteinte**
+
+**Offre 2027 :** format, capacité et tarification à confirmer
 
 ### Inclusions Principales (16 total)
 - Ad reads mensuels podcast (12×/an)
@@ -127,7 +131,9 @@
 ---
 
 ## 4. Partenaires Spotlight
-**30 000 $ (6,8%) • 9 mois • ~3 300-3 500 $/mois**
+**30 000 $ (6,9%) • calendrier 2026 complet (10/10) • 3 500 $/mois affiché**
+
+**Offre 2027 :** intérêt accepté, calendrier à confirmer
 
 ### Inclusions Mensuelles (9 total)
 - Page sur mesure site web
@@ -209,7 +215,7 @@
 - 20h15-21h30 : Networking + drinks
 
 #### 📊 Portée (4 inclusions)
-- 115K+ vues YouTube cumulées
+- 120K+ écoutes du podcast
 - 15,9K+ abonnés mesurés multi-plateforme
 - 20% fondateurs, 80% professionnels
 - Contenu français
@@ -298,19 +304,17 @@
 ## Résumé Exécutif
 
 ### 💰 Répartition Revenus
-- **Top 3 produits :** 80,9% des revenus (354K$)
-- **Produits majeurs (>20K$) :** 90,8% des revenus (398K$)
-- **Produits complémentaires (<20K$) :** 9,2% des revenus (40K$)
+- **Top 3 produits :** 81,0% des revenus (350K$)
+- **Produits majeurs (≥20K$) :** 92,6% des revenus (400K$)
+- **Produits complémentaires (<20K$) :** 7,4% des revenus (32K$)
 
 ### 📊 Inclusions Totales
-- **150+ inclusions** réparties sur 9 produits
-- **Moyenne :** 16,7 inclusions par produit
+- **143 inclusions affichées** réparties sur 9 produits
+- **Moyenne :** 15,9 inclusions par produit
 - **Range :** 3 (Founder Dinners) à 34 (Conférence)
 
 ### 🎯 Bande Passante Promotionnelle
-- **405 unités consommées** sur 451 disponibles
-- **Marge :** 46 unités disponibles (10,2%)
-- **Taux utilisation :** 89,8%
+- **À recalculer** pour refléter les 5 partenaires annuels certifiés et le calendrier Spotlight complet
 
 ### ✅ Statut Complétion
-**100% des produits ont des inclusions détaillées et sont prêts pour le lancement 2026.**
+**Le catalogue couvre la fin de 2026 et recueille l'intérêt pour 2027. Les formats et capacités 2027 ne sont pas encore confirmés.**
