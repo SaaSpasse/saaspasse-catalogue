@@ -26,7 +26,7 @@ Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse 
 - **Publication podcast** : Diffusion sur le feed SaaSpasse
   - Intégration dans la programmation officielle du podcast
 - **Publication YouTube** : Mise en ligne sur la chaîne
-  - Visibilité auprès des 800+ abonnés YouTube
+  - Visibilité durable sur la chaîne vidéo SaaSpasse
 - **Interview VIP** : Entrevue avec un joueur clé de l'organisation host
   - Spotlight exclusif sur un leader de votre organisation
 - **Fichiers complets** : Accès total pour remixage et usage marketing/RH
@@ -41,8 +41,8 @@ Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse 
   - Continuation du networking post-enregistrement
 
 ### 📊 Portée & Audience (4 inclusions)
-- **115K+ vues YouTube cumulées**
-  - Audience vidéo mesurée dans le snapshot analytics
+- **120K+ écoutes du podcast**
+  - Portée cumulée affichée sur le site SaaSpasse au 2 août 2026
 - **15,9K+ abonnés mesurés** (SaaSpasse + LinkedIn personnel Frank, YouTube, Instagram, infolettre)
   - Audience qualifiée multi-plateforme
 - **Audience ciblée** : 20% fondateurs tech, 80% professionnels tech
