@@ -1,8 +1,8 @@
 # Partenaires Spotlight (Mensuel) 2026
 
 ## Aperçu
-**Revenus prévus :** 30 000 $ (6,8% du total)
-**Quantité :** 10 spots sur 10 réservés en 2026
+**Revenus prévus :** 30 000 $ (7,2% du total des offres actives)
+**Quantité :** 7 spots sur 7 réservés en 2026
 **Prix affiché :** 3 500 $ / mois
 **Offre 2027 :** Intérêt accepté, calendrier à confirmer
 

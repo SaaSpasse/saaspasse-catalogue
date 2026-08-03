@@ -1,11 +1,11 @@
 # Gamme Complète SaaSpasse 2026
 
 ## Vue d'Ensemble Stratégique
-**Revenus totaux prévus :** 432 000 $
-**Nombre de produits :** 9 lignes d'affaires
-**Inclusions totales :** 143 inclusions affichées dans le catalogue public
+**Revenus totaux prévus des offres actives :** 418 500 $
+**Nombre de produits actifs :** 8 lignes d'affaires
+**Inclusions totales :** 126 inclusions affichées dans le catalogue public
 
-> Mise à jour du 2 août 2026 : 5 partenaires annuels certifiés en 2026 et calendrier Spotlight 2026 complet. Les formats et capacités 2027 restent à confirmer.
+> Mise à jour du 2 août 2026 : 5 partenaires annuels certifiés, calendrier Spotlight complet à 7/7, 2 forfaits Employeur premium vendus et 1 Founder Dinner encore disponible à l'automne 2026. Le Job Board Premium transactionnel est retiré; le job board v3 est gratuit. Les formats et capacités 2027 restent à confirmer.
 
 ---
 
@@ -13,20 +13,19 @@
 
 | # | Produit | Revenus | % Total | Inclusions | Statut |
 |---|---------|---------|---------|------------|--------|
-| 1 | [Partenaires Annuels Certifiés](#1-partenaires-annuels-certifiés) | 160 000 $ | 37,0% | 16 | ✅ |
-| 2 | [Conférence Annuelle](#2-conférence-annuelle) | 120 000 $ | 27,8% | 34 | ✅ |
-| 3 | [Communauté Privée](#3-communauté-privée) | 70 000 $ | 16,2% | 15 | ✅ |
-| 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 6,9% | 9 | ✅ |
-| 5 | [Employeur Premium](#5-employeur-premium) | 20 000 $ | 4,6% | 23 | ✅ |
-| 6 | [Job Board Premium](#7-job-board-premium) | 13 500 $ | 3,1% | 17 | ✅ |
-| 7 | [Événements Live](#6-événements-live) | 10 000 $ | 2,3% | 20 | ✅ |
-| 8 | [Founder Dinners](#8-founder-dinners) | 6 000 $ | 1,4% | 3 | ✅ |
-| 9 | [Infolettre SaaSpal](#9-infolettre-saaspal) | 2 500 $ | 0,6% | 6 | ✅ |
+| 1 | [Partenaires Annuels Certifiés](#1-partenaires-annuels-certifiés) | 160 000 $ | 38,2% | 16 | ✅ |
+| 2 | [Conférence Annuelle](#2-conférence-annuelle) | 120 000 $ | 28,7% | 34 | ✅ |
+| 3 | [Communauté Privée](#3-communauté-privée) | 70 000 $ | 16,7% | 15 | ✅ |
+| 4 | [Partenaires Spotlight](#4-partenaires-spotlight) | 30 000 $ | 7,2% | 9 | ✅ |
+| 5 | [Employeur Premium](#5-employeur-premium) | 20 000 $ | 4,8% | 23 | ✅ |
+| 6 | [Événements Live](#6-événements-live) | 10 000 $ | 2,4% | 20 | ✅ |
+| 7 | [Founder Dinners](#7-founder-dinners) | 6 000 $ | 1,4% | 3 | ✅ |
+| 8 | [Infolettre SaaSpal](#8-infolettre-saaspal) | 2 500 $ | 0,6% | 6 | ✅ |
 
 ---
 
 ## 1. Partenaires Annuels Certifiés
-**160 000 $ (37,0%) • 5 partenaires certifiés en 2026 • capacité atteinte**
+**160 000 $ (38,2%) • 5 partenaires certifiés en 2026 • capacité atteinte**
 
 **Offre 2027 :** format, capacité et tarification à confirmer
 
@@ -53,7 +52,7 @@
 ---
 
 ## 2. Conférence Annuelle
-**120 000 $ (27,4%) • 1 conférence • Recettes totales**
+**120 000 $ (28,7%) • 1 conférence • Recettes totales**
 
 ### 4 Forfaits de Commandite (34 inclusions total)
 
@@ -102,7 +101,7 @@
 ---
 
 ## 3. Communauté Privée
-**70 000 $ (16,0%) • 45-50 membres • ~1 400-1 600 $/membre/an**
+**70 000 $ (16,7%) • 45-50 membres • ~1 400-1 600 $/membre/an**
 
 ### Inclusions par Catégorie (15 total)
 
@@ -131,7 +130,7 @@
 ---
 
 ## 4. Partenaires Spotlight
-**30 000 $ (6,9%) • calendrier 2026 complet (10/10) • 3 500 $/mois affiché**
+**30 000 $ (7,2%) • calendrier 2026 complet (7/7) • 3 500 $/mois affiché**
 
 **Offre 2027 :** intérêt accepté, calendrier à confirmer
 
@@ -151,7 +150,7 @@
 ---
 
 ## 5. Employeur Premium
-**20 000 $ (4,6%) • 2 contrats • 10 000 $/3 mois**
+**20 000 $ (4,8%) • 2 contrats • 10 000 $/3 mois**
 
 ### Inclusions par Contrat (23 total)
 
@@ -193,7 +192,7 @@
 ---
 
 ## 6. Événements Live
-**10 000 $ (% à recalculer) • 4 événements • 2 500 $/événement**
+**10 000 $ (2,4%) • 4 événements • 2 500 $/événement**
 
 ### Forfait Host Complet (20 inclusions)
 
@@ -231,43 +230,7 @@
 
 ---
 
-## 7. Job Board Premium
-**13 500 $ (3,1%) • ~36 offres/an • ~375-400 $/offre**
-
-### Inclusions Complètes (22 total)
-
-#### 💰 Tarification (5 inclusions)
-- 400$/mois ou 1 020$/3 mois
-- Durée flexible minimum 1 mois
-- Paiement Stripe automatisé
-- Remboursement pack 3 mois
-- Économie 15% pack long
-
-#### 📄 Contenu Enrichi (8 inclusions)
-- Tous champs gratuits + médias
-- Vidéo fondateur <1 min
-- Liens YouTube
-- Photos équipe/bureaux
-- Témoignages clients/employés
-- Avis employés Glassdoor
-- Détails processus entrevue
-- Badge Premium prioritaire
-
-#### 📢 Promotion (4 inclusions)
-- Infolettre hebdomadaire (4×/mois)
-- LinkedIn + repartage Frank
-- Instagram mensuel
-- Ad-read podcast (1/4 épisodes)
-
-#### 📊 Support (4 inclusions)
-- Analytics libre-service
-- Job du mois préférentiel (2 000$)
-- Support personnalisé
-- Renouvellement facile
-
----
-
-## 8. Founder Dinners
+## 7. Founder Dinners
 **6 000 $ (1,4%) • 3 dinners • 2 000 $/dinner**
 
 ### Inclusions Exclusives (3 total)
@@ -279,7 +242,7 @@
 
 ---
 
-## 9. Infolettre SaaSpal
+## 8. Infolettre SaaSpal
 **2 500 $ (0,6%) • Abonnements récurrents • 2 formules**
 
 ### Formules Disponibles
@@ -304,13 +267,13 @@
 ## Résumé Exécutif
 
 ### 💰 Répartition Revenus
-- **Top 3 produits :** 81,0% des revenus (350K$)
-- **Produits majeurs (≥20K$) :** 92,6% des revenus (400K$)
-- **Produits complémentaires (<20K$) :** 7,4% des revenus (32K$)
+- **Top 3 produits :** 83,6% des revenus (350K$)
+- **Produits majeurs (≥20K$) :** 95,6% des revenus (400K$)
+- **Produits complémentaires (<20K$) :** 4,4% des revenus (18,5K$)
 
 ### 📊 Inclusions Totales
-- **143 inclusions affichées** réparties sur 9 produits
-- **Moyenne :** 15,9 inclusions par produit
+- **126 inclusions affichées** réparties sur 8 produits
+- **Moyenne :** 15,8 inclusions par produit
 - **Range :** 3 (Founder Dinners) à 34 (Conférence)
 
 ### 🎯 Bande Passante Promotionnelle

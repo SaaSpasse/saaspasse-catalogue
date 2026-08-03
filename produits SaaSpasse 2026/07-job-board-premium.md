@@ -1,7 +1,10 @@
-# Job Board Premium 2026
+# Job Board Premium 2026 — offre retirée
+
+> **Statut : retiré du catalogue public.** Le produit transactionnel à 400 $/mois et son checkout Stripe ne sont pas portés dans la plateforme v3. Le job board est maintenant gratuit et alimenté par synchronisation ATS ou publication manuelle. Les indicateurs `is_premium` et `top_job_board` restent des outils administratifs pour les ententes vendues humainement, notamment Employeur premium. Le contenu ci-dessous est conservé uniquement comme historique de l'offre v2.
 
 ## Aperçu
-**Revenus prévus :** 13 500 $ (3,1% du total)
+**Projection historique retirée :** 13 500 $
+**Revenus observés avant le pivot :** environ 668 $ sur 6 mois
 **Quantité :** ~36 offres/an
 **Prix unitaire :** ~375-400 $ / offre (ou 400 $/mois, 1 020 $/pack 3 mois)
 

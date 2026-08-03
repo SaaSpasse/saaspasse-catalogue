@@ -1,9 +1,10 @@
 # Événements Live 2026
 
 ## Aperçu
-**Revenus prévus :** 10 000 $ (% à recalculer)
+**Revenus prévus :** 10 000 $ (2,4% du total des offres actives)
 **Quantité :** 4 événements
 **Prix unitaire :** 2 500 $ / événement
+**Dates confirmées :** Nexapp — janvier 2026; Poka — avril 2026; Amiral Ventures — novembre 2026; Mirego — janvier 2027
 
 ## Description
 Forfait Host pour organisations souhaitant accueillir un podcast live SaaSpasse dans leurs locaux, combinant networking, production professionnelle et visibilité de marque.

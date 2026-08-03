@@ -1,7 +1,7 @@
 # Partenaires Annuels Certifiés 2026
 
 ## Aperçu
-**Revenus prévus :** 160 000 $ (37,0% du total)
+**Revenus prévus :** 160 000 $ (38,2% du total des offres actives)
 **Quantité :** 5 partenaires certifiés en 2026 (capacité atteinte)
 **Tarification 2026 :** Non affichée publiquement
 **Plafond maximum :** 5 partenaires annuels certifiés
