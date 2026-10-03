@@ -31,10 +31,11 @@ attendus. Les sources ont été lues via `listSiteFiles`, puis les 23 routes ont
 200. L'inventaire Search Console/backlinks n'est pas accessible dans cette
 session et doit compléter cet inventaire avant la bascule.
 
-Aperçu créé et vérifié sans production :
-https://6ac06a50978355ec0d5f52a7--saaspasse-catalogue.netlify.app
-(déploiement `6ac06a50978355ec0d5f52a7`, source
-`a7acce069af6d73b100260d67f2c1da60742afdc`).
+Aperçu Git de la PR #3 vérifié sans production :
+https://6ac06d6eb0ca1000087e59ab--saaspasse-catalogue.netlify.app
+(déploiement `6ac06d6eb0ca1000087e59ab`, source
+`d94809c6459fb650a5a3efe584120f14ab5484bc`, vérification indépendante sous
+Node 22.23.3 le `2026-10-03T02:52:08.025Z`, soit le 2 octobre au Québec).
 `preview-validation.json` conserve les 86 contrôles GET/HEAD réussis :
 statut, Location et `X-Robots-Tag: noindex` sur les entrées historiques,
 queries, documents retirés, chemins inconnus, assets et robots.txt.

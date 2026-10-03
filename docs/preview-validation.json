@@ -1,7 +1,7 @@
 {
-  "preview_url": "https://6ac06a50978355ec0d5f52a7--saaspasse-catalogue.netlify.app",
-  "captured_at": "2026-10-03T02:38:06.393Z",
-  "tested_source_sha": "a7acce069af6d73b100260d67f2c1da60742afdc",
+  "preview_url": "https://6ac06d6eb0ca1000087e59ab--saaspasse-catalogue.netlify.app",
+  "captured_at": "2026-10-03T02:52:08.025Z",
+  "tested_source_sha": "d94809c6459fb650a5a3efe584120f14ab5484bc",
   "checks_passed": 86,
   "scope": "statuts, Location et noindex GET/HEAD; fragments navigateur et destinations publiques de l'app à valider séparément",
   "observed": [
@@ -52,42 +52,42 @@
       "method": "GET",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/logo-saaspasse.png",
       "method": "HEAD",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/saaspaladin-opt.png",
       "method": "GET",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/saaspaladin-opt.png",
       "method": "HEAD",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/saaspaladin.png",
       "method": "GET",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/saaspaladin.png",
       "method": "HEAD",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/catalogue-public-saaspasse-2026.html",
@@ -570,42 +570,42 @@
       "method": "GET",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/robots.txt",
       "method": "HEAD",
       "status": 200,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/inconnu",
       "method": "GET",
       "status": 404,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/inconnu",
       "method": "HEAD",
       "status": 404,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/inconnu.png",
       "method": "GET",
       "status": 404,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     },
     {
       "path": "/assets/inconnu.png",
       "method": "HEAD",
       "status": 404,
       "location": null,
-      "robots": "noindex, nofollow, noindex"
+      "robots": "noindex"
     }
   ]
 }

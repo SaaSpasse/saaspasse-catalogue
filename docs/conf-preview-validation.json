@@ -1,0 +1,182 @@
+{
+  "preview_url": "https://6ac06f575d139c00084d3239--conf-saaspasse-2026.netlify.app",
+  "tested_source_sha": "7a61024a157f9deb00a7d2110891010665f15b38",
+  "captured_at": "2026-10-03T03:00:06.312Z",
+  "scope": "GET/HEAD 6 public read-only pages; 3 rendered 2027 links; Luma URL preservation; public Conf canonicals and /25/ exact static archive; no public destination follow-up before A1",
+  "observed": [
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/commanditaires/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/commanditaires/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/programmation/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/programmation/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-1/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-1/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-3/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-3/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/25/",
+      "method": "GET",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/25/",
+      "method": "HEAD",
+      "status": 200,
+      "robots": "noindex"
+    },
+    {
+      "path": "/commanditaires",
+      "method": "GET",
+      "status": 301,
+      "location": "/commanditaires/",
+      "robots": "noindex"
+    },
+    {
+      "path": "/programmation",
+      "method": "GET",
+      "status": 301,
+      "location": "/programmation/",
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-1",
+      "method": "GET",
+      "status": 301,
+      "location": "/keynote-1/",
+      "robots": "noindex"
+    },
+    {
+      "path": "/keynote-3",
+      "method": "GET",
+      "status": 301,
+      "location": "/keynote-3/",
+      "robots": "noindex"
+    },
+    {
+      "path": "/25",
+      "method": "GET",
+      "status": 301,
+      "location": "/25/",
+      "robots": "noindex"
+    }
+  ],
+  "cta_counts": [
+    {
+      "path": "/",
+      "links": 1
+    },
+    {
+      "path": "/commanditaires/",
+      "links": 2
+    }
+  ],
+  "luma_preserved": "https://luma.com/q7ed8w72?utm_source=conf-site&utm_medium=website&utm_campaign=conf26-waitlist",
+  "archive_25_byte_identical": true,
+  "browser": {
+    "tool": "agent-browser 0.38.2, isolated Chromium, no user profile",
+    "mobile": {
+      "url": "https://6ac06f575d139c00084d3239--conf-saaspasse-2026.netlify.app/commanditaires/",
+      "width": 390,
+      "scrollWidth": 390,
+      "canonical": "https://conf.saaspasse.com/commanditaires",
+      "cta": [
+        {
+          "text": "voir l'offre de commandite ↗",
+          "href": "https://saaspasse.com/collaborer/commandite-conference",
+          "width": 269.234375,
+          "height": 44
+        },
+        {
+          "text": "commanditer en 2027",
+          "href": "https://saaspasse.com/collaborer/commandite-conference",
+          "width": 145.921875,
+          "height": 32
+        }
+      ]
+    },
+    "desktop": {
+      "url": "https://6ac06f575d139c00084d3239--conf-saaspasse-2026.netlify.app/commanditaires/",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "cta": [
+        {
+          "text": "voir l'offre de commandite ↗",
+          "href": "https://saaspasse.com/collaborer/commandite-conference",
+          "width": 269.234375,
+          "height": 44
+        },
+        {
+          "text": "commanditer en 2027",
+          "href": "https://saaspasse.com/collaborer/commandite-conference",
+          "width": 133.765625,
+          "height": 14
+        }
+      ]
+    },
+    "home": {
+      "url": "https://6ac06f575d139c00084d3239--conf-saaspasse-2026.netlify.app/",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "cta": [
+        {
+          "text": "commanditer en 2027",
+          "href": "https://saaspasse.com/collaborer/commandite-conference"
+        }
+      ]
+    },
+    "actions": "GET navigation home → commanditaires → back, href reads and viewport changes only; no Luma, mail, Auth, vote or notes action",
+    "screenshot_reviewed": "390×844 new section visually fits; 44px main CTA; distinct from 8 sponsors 2026"
+  }
+}
