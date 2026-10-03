@@ -1,0 +1,611 @@
+{
+  "preview_url": "https://6ac06a50978355ec0d5f52a7--saaspasse-catalogue.netlify.app",
+  "captured_at": "2026-10-03T02:38:06.393Z",
+  "tested_source_sha": "a7acce069af6d73b100260d67f2c1da60742afdc",
+  "checks_passed": 86,
+  "scope": "statuts, Location et noindex GET/HEAD; fragments navigateur et destinations publiques de l'app à valider séparément",
+  "observed": [
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/claude.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/claude.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/readme.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/readme.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/logo-saaspasse.png",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/logo-saaspasse.png",
+      "method": "HEAD",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/saaspaladin-opt.png",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/saaspaladin-opt.png",
+      "method": "HEAD",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/saaspaladin.png",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/saaspaladin.png",
+      "method": "HEAD",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/catalogue-public-saaspasse-2026.html",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/catalogue-public-saaspasse-2026.html",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/index.html",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/index.html",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026.html",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026.html",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/00-gamme-complete-saaspasse-2026.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/00-gamme-complete-saaspasse-2026.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/01-partenaires-annuels-certifies.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/01-partenaires-annuels-certifies.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/02-conference-annuelle.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/02-conference-annuelle.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/03-communaute-privee.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/03-communaute-privee.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/04-partenaires-spotlight.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/04-partenaires-spotlight.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/05-employeur-premium.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/05-employeur-premium.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/06-evenements-live.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/06-evenements-live.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/07-job-board-premium.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/07-job-board-premium.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/08-founder-dinners.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/08-founder-dinners.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/09-infolettre-saaspal.md",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits saaspasse 2026/09-infolettre-saaspal.md",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_analytics.html",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_analytics.html",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_bande_passante_2026.html",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_bande_passante_2026.html",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_bande_passante_clean.html",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_bande_passante_clean.html",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_repartition_forfaits.html",
+      "method": "GET",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/saaspasse_repartition_forfaits.html",
+      "method": "HEAD",
+      "status": 410,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/index.html/",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/index.html/",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/INDEX.HTML",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/INDEX.HTML",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits%20SaaSpasse%202026.html",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/produits%20SaaSpasse%202026.html",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=annuels",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/partenariat-certifie#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=annuels",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/partenariat-certifie#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=employeur",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/employeur-premium#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=employeur",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/employeur-premium#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=conference",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/commandite-conference#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=conference",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/commandite-conference#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=founder-dinners",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/founder-dinner#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=founder-dinners",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/founder-dinner#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=host",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=host",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=communaute",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=communaute",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=spotlight",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=spotlight",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=infolettre",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=infolettre",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=&produit=annuels",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=&produit=annuels",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=conference&produit=employeur",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/commandite-conference#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=conference&produit=employeur",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/commandite-conference#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=constructor",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=constructor",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=__proto__",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=__proto__",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=https%3A%2F%2Fevil.example",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=https%3A%2F%2Fevil.example",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer#offres",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=annuels&utm_campaign=%C3%89t%C3%A9+2027&ref=a&ref=b&constructor=x&__proto__=safe",
+      "method": "GET",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/partenariat-certifie?utm_campaign=%C3%89t%C3%A9+2027&ref=a&ref=b&constructor=x&__proto__=safe#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/?produit=annuels&utm_campaign=%C3%89t%C3%A9+2027&ref=a&ref=b&constructor=x&__proto__=safe",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://saaspasse.com/collaborer/partenariat-certifie?utm_campaign=%C3%89t%C3%A9+2027&ref=a&ref=b&constructor=x&__proto__=safe#offer-title",
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/robots.txt",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/robots.txt",
+      "method": "HEAD",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/inconnu",
+      "method": "GET",
+      "status": 404,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/inconnu",
+      "method": "HEAD",
+      "status": 404,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/inconnu.png",
+      "method": "GET",
+      "status": 404,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    },
+    {
+      "path": "/assets/inconnu.png",
+      "method": "HEAD",
+      "status": 404,
+      "location": null,
+      "robots": "noindex, nofollow, noindex"
+    }
+  ]
+}
