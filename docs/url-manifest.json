@@ -1,0 +1,328 @@
+{
+  "captured_at": "2026-10-03T02:35:41.042Z",
+  "baseline_sha": "aeebd3a2ee07120540e168867a118ecad842d76b",
+  "site_id": "b79b83a0-7552-4a78-86cc-1dad593fe1ee",
+  "inventory_source": "API Netlify listSiteFiles du déploiement actuellement publié + racine",
+  "search_console_and_backlink_inventory": "non disponible dans cette session, à compléter avant bascule",
+  "published_files": [
+    {
+      "path": "/claude.md",
+      "mime_type": "text/markdown",
+      "size": 922
+    },
+    {
+      "path": "/readme.md",
+      "mime_type": "text/markdown",
+      "size": 54
+    },
+    {
+      "path": "/assets/logo-saaspasse.png",
+      "mime_type": "image/png",
+      "size": 10206
+    },
+    {
+      "path": "/assets/saaspaladin-opt.png",
+      "mime_type": "image/png",
+      "size": 105640
+    },
+    {
+      "path": "/assets/saaspaladin.png",
+      "mime_type": "image/png",
+      "size": 2724716
+    },
+    {
+      "path": "/catalogue-public-saaspasse-2026.html",
+      "mime_type": "text/html",
+      "size": 57194
+    },
+    {
+      "path": "/index.html",
+      "mime_type": "text/html",
+      "size": 78503
+    },
+    {
+      "path": "/produits saaspasse 2026.html",
+      "mime_type": "text/html",
+      "size": 21716
+    },
+    {
+      "path": "/produits saaspasse 2026/00-gamme-complete-saaspasse-2026.md",
+      "mime_type": "text/markdown",
+      "size": 8577
+    },
+    {
+      "path": "/produits saaspasse 2026/01-partenaires-annuels-certifies.md",
+      "mime_type": "text/markdown",
+      "size": 3639
+    },
+    {
+      "path": "/produits saaspasse 2026/02-conference-annuelle.md",
+      "mime_type": "text/markdown",
+      "size": 4236
+    },
+    {
+      "path": "/produits saaspasse 2026/03-communaute-privee.md",
+      "mime_type": "text/markdown",
+      "size": 2743
+    },
+    {
+      "path": "/produits saaspasse 2026/04-partenaires-spotlight.md",
+      "mime_type": "text/markdown",
+      "size": 2586
+    },
+    {
+      "path": "/produits saaspasse 2026/05-employeur-premium.md",
+      "mime_type": "text/markdown",
+      "size": 4068
+    },
+    {
+      "path": "/produits saaspasse 2026/06-evenements-live.md",
+      "mime_type": "text/markdown",
+      "size": 3565
+    },
+    {
+      "path": "/produits saaspasse 2026/07-job-board-premium.md",
+      "mime_type": "text/markdown",
+      "size": 3518
+    },
+    {
+      "path": "/produits saaspasse 2026/08-founder-dinners.md",
+      "mime_type": "text/markdown",
+      "size": 2372
+    },
+    {
+      "path": "/produits saaspasse 2026/09-infolettre-saaspal.md",
+      "mime_type": "text/markdown",
+      "size": 2924
+    },
+    {
+      "path": "/saaspasse_analytics.html",
+      "mime_type": "text/html",
+      "size": 11552
+    },
+    {
+      "path": "/saaspasse_bande_passante_2026.html",
+      "mime_type": "text/html",
+      "size": 16628
+    },
+    {
+      "path": "/saaspasse_bande_passante_clean.html",
+      "mime_type": "text/html",
+      "size": 8904
+    },
+    {
+      "path": "/saaspasse_repartition_forfaits.html",
+      "mime_type": "text/html",
+      "size": 9453
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "url": "https://catalogue.saaspasse.com/",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 301,
+      "expected_location_after_migration": "https://saaspasse.com/collaborer",
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/claude.md",
+      "url": "https://catalogue.saaspasse.com/claude.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/readme.md",
+      "url": "https://catalogue.saaspasse.com/readme.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/assets/logo-saaspasse.png",
+      "url": "https://catalogue.saaspasse.com/assets/logo-saaspasse.png",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 200,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/assets/saaspaladin-opt.png",
+      "url": "https://catalogue.saaspasse.com/assets/saaspaladin-opt.png",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 200,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/assets/saaspaladin.png",
+      "url": "https://catalogue.saaspasse.com/assets/saaspaladin.png",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 200,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/catalogue-public-saaspasse-2026.html",
+      "url": "https://catalogue.saaspasse.com/catalogue-public-saaspasse-2026.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 301,
+      "expected_location_after_migration": "https://saaspasse.com/collaborer",
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/index.html",
+      "url": "https://catalogue.saaspasse.com/index.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 301,
+      "expected_location_after_migration": "https://saaspasse.com/collaborer",
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026.html",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 301,
+      "expected_location_after_migration": "https://saaspasse.com/collaborer",
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/00-gamme-complete-saaspasse-2026.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/00-gamme-complete-saaspasse-2026.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/01-partenaires-annuels-certifies.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/01-partenaires-annuels-certifies.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/02-conference-annuelle.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/02-conference-annuelle.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/03-communaute-privee.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/03-communaute-privee.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/04-partenaires-spotlight.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/04-partenaires-spotlight.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/05-employeur-premium.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/05-employeur-premium.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/06-evenements-live.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/06-evenements-live.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/07-job-board-premium.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/07-job-board-premium.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/08-founder-dinners.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/08-founder-dinners.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/produits saaspasse 2026/09-infolettre-saaspal.md",
+      "url": "https://catalogue.saaspasse.com/produits%20saaspasse%202026/09-infolettre-saaspal.md",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/saaspasse_analytics.html",
+      "url": "https://catalogue.saaspasse.com/saaspasse_analytics.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/saaspasse_bande_passante_2026.html",
+      "url": "https://catalogue.saaspasse.com/saaspasse_bande_passante_2026.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/saaspasse_bande_passante_clean.html",
+      "url": "https://catalogue.saaspasse.com/saaspasse_bande_passante_clean.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    },
+    {
+      "path": "/saaspasse_repartition_forfaits.html",
+      "url": "https://catalogue.saaspasse.com/saaspasse_repartition_forfaits.html",
+      "observed_status_before_migration": 200,
+      "observed_location_before_migration": null,
+      "expected_status_after_migration": 410,
+      "expected_location_after_migration": null,
+      "owner": "Netlify catalogue"
+    }
+  ]
+}
