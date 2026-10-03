@@ -22,20 +22,37 @@ Le check obligatoire bloquait initialement sur cinq vulnérabilités des outils
 préexistants. Overrides patch ciblés `sharp 0.35.4` et `undici 7.29.1` les
 corrigent sans changement de major ni suppression du contrôle d'audit.
 
-Le CLI Cloudflare n'est plus authentifié : OAuth expiré. Aucun UUID de
-candidate n'est déclaré. Le workflow existant autorise l'upload uniquement
-sur push `master`; son workflow_dispatch propose stage/promote/rollback,
-uniquement sur `master`. L'environnement GitHub `production` a un reviewer
-`SaaSpasse` et une politique de branche. Le lancement sur une branche de
-travail ne fournit donc pas un chemin d'upload candidate existant.
+La réauthentification OAuth via Chrome a rétabli l'accès au compte SaaSpasse,
+avec scopes workers/scripts/routes write et account/user/zone read, sans droit
+DNS. Version candidate non active chargée :
+`009384da-a945-4560-ba4f-7706f2fd1e57`, annotation exacte
+`git:140466bd896e410c3485d6abfa6da338630dd29b`, créée le
+`2026-10-03T02:42:17.95439Z` (2 octobre au Québec). Le binding
+`SAASPASSE_WORKER_ORIGIN_SECRET` est présent avec type `secret_text`;
+aucune valeur n'a été lue, affichée ou changée.
 
-Après authentification dans Chrome avec `npx wrangler login --browser=false`,
-vérifier le compte, le déploiement actif et le checkout propre exact, puis
-charger seulement la Version non active :
+Les snapshots JSON avant/après upload sont identiques : déploiement actif
+`6c134c72-6a60-403c-8924-b8aaa5f991e5`, stable legacy
+`087e8d4e-6e77-40b9-967e-84bf39987165` à 100 % et ancien candidat
+origin-auth `557906f1-0757-435c-9a7c-09ace09a26f4` à 0 %.
+`worker-candidate-receipt.json` conserve le reçu, sans données de secret.
 
-```sh
-npx wrangler versions upload --message git:140466bd896e410c3485d6abfa6da338630dd29b
-```
+**Cette candidate ne doit pas être promue pour le seul catalogue.** Le code de
+la branche distante récente inclut origin-auth, jamais activé en production.
+Voir `worker-live-diff.md` : headers réservés, secret POST et politique de
+suivi des redirects de l'origine changeraient également. La parité de ces
+comportements avec la production n'est pas attestée par l'upload ou les tests
+locaux. Recommandation : porter uniquement les deux redirects sur la source
+active historiquement associée à `4c736998bc0f1e1c52640919ee0c48d4a4899ef1`,
+en préservant ses autres comportements et les bindings déjà provisionnés,
+ou valider origin-auth dans un lot distinct explicitement reconnu.
+
+Le workflow existant autorise l'upload uniquement sur push `master`;
+workflow_dispatch propose stage/promote/rollback, uniquement sur `master`.
+L'environnement GitHub `production` exige reviewer `SaaSpasse` et branche
+`master`. Il ne fournit pas de chemin d'upload candidate d'une branche de
+travail. La présente candidate a été chargée avec le CLI authentifié, sans
+nouveau déploiement actif.
 
 Le canari canonique Version Override demande ensuite le stage explicite
 (stable 100 %, candidate 0 %). Aucune étape stage/promote/secret/DNS n'est
@@ -77,4 +94,5 @@ le parcours jusqu'à la fiche publique seront contrôlés après coordination.
 Valider d'abord les destinations publiques A1 et leur repli compatible.
 Puis traiter les publications B/C/D coordonnées, preuves canari et parcours
 navigateur; Search Console et contrôle des liens après publication. Les
-présentes preuves sont de préparation et d'aperçu, pas de production.
+présentes preuves sont de préparation, de Version inactive et d'aperçu,
+pas de validation d'une bascule de production.
