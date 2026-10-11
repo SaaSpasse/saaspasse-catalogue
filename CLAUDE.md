@@ -1,32 +1,31 @@
-# Catalogue SaaSpasse 2026
+# Catalogue SaaSpasse — archive et compatibilité
 
-## Fichiers du projet
-- Le fichier principal à modifier est `index.html`
-- Chemin complet : `~/claude-code/saaspasse-catalogue/index.html`
+Le catalogue public fait partie de `saaspasse-app`.
+Le projet actif pour ses textes, offres, composants et design est
+`/Users/francoislanthiernadeau/work/saaspasse-app`; le chemin historique
+`/Users/francoislanthiernadeau/claude-code/saaspasse-app` reste valide.
 
-## Dépôt GitHub
-- Repo : https://github.com/SaaSpasse/saaspasse-catalogue
-- Branche principale : main
+## Pour modifier le catalogue actuel
 
-## Déploiement
-- Hébergé sur Netlify (projet : **saaspasse-catalogue**)
-- URL live : https://catalogue.saaspasse.com/
-- Le déploiement est automatique après chaque push sur GitHub
+- Travailler dans `saaspasse-app`, en suivant son `AGENTS.md` et son `README.md`.
+- Lire `docs/catalogue-workflow.md` et les sections catalogue de `docs/GUIDE.md`.
+- Le hub public est `https://saaspasse.com/collaborer`.
+- Les cinq fiches, leurs textes et leurs preuves se trouvent dans
+  `web/app/collaborer/`; la méthode commune est dans `web/app/certification/`.
+- Partir de la version actuelle de `main`, dans une branche descriptive propre.
 
-## Workflow de modification
-1. Modifier `index.html`
-2. Commit les changements
-3. Push sur le repo GitHub
-4. Netlify déploie automatiquement (quelques secondes)
+## Rôle de ce dépôt
 
-## Commandes rapides
-```bash
-cd "$HOME/claude-code/saaspasse-catalogue"
-git add .
-git commit -m "Description du changement"
-git push origin main
-```
+- Conserver les anciens HTML, fiches produits 2026 et documents comme historique.
+- `index.html` est l'ancien catalogue; il n'est plus la source du site public.
+- Conserver l'ancien domaine `catalogue.saaspasse.com` et ses redirections.
+- L'implémentation Netlify de compatibilité est conservée dans la branche
+  `codex/catalogue-migration-release-20261002` : `netlify.toml`,
+  `netlify/edge-functions/catalogue-redirect.js`, `migration-public/` et les
+  manifests/tests de migration. Ce chantier est distinct du contenu de l'app.
+- Ne pas réutiliser l'ancien workflow « modifier index.html puis pousser main
+  pour publier le catalogue ». Toute intervention sur Netlify doit préserver
+  les redirections vers l'app, les paramètres de campagne et les anciennes URLs.
 
-## Améliorations futures
-
-- **Section témoignages par produit** - Ajouter des témoignages de partenaires/clients pour chaque produit du catalogue
+Les repères de reprise des anciens travaux figurent dans la mémoire partagée
+de l'app. La mémoire et les sauvegardes privées ne doivent pas être committées.
